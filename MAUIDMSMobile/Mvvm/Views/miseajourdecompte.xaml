@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIDMSMobile.Mvvm.Views.miseajourdecompte"
+    xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+              xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+             x:Name="miseajourroot"
+             xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+             NavigationPage.HasNavigationBar="False"
+             Title="{loc:Translate MiseCompte}">
+
+
+
+    <!--<ContentPage.ToolbarItems>
+        --><!-- Ajouter un logo dans la barre d'outils --><!--
+        <ToolbarItem IconImageSource="logob2m.png" />
+    </ContentPage.ToolbarItems>-->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#ffe5c3" Offset="0.0" />
+            <GradientStop Color="#f9c27b" Offset="0.6" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
+        <VerticalStackLayout >
+            <Label Text="{loc:Translate MiseCompte}" FontAttributes="Bold" FontFamily="Times New Roman" FontSize="26"
+                TextColor="#eb8126" Margin="46,25,0,25" />
+            <ActivityIndicator
+              
+x:Name="activityIndicator"
+IsEnabled="{Binding IsBusy}"
+IsRunning="{Binding IsBusy}"
+IsVisible="{Binding IsBusy}" />
+            <sf:SfTextInputLayout Hint="{loc:Translate Prenom}" ContainerBackground="#fcf3e8" ContainerType="Filled" HeightRequest="80" WidthRequest="270" Margin="0,-0,0,0">
+                <Entry Text="{Binding Userupdate.firstName}" TextColor="Black" MaxLength="30"/>
+            </sf:SfTextInputLayout>
+
+            <Label x:Name="Utilisateurupdate_firstNameError" IsVisible="False" TextColor="Red"  Margin="50,-15,0,0" FontAttributes="Bold" />
+
+            <sf:SfTextInputLayout Hint="{loc:Translate Nom}" ContainerType="Filled" ContainerBackground="#fcf3e8" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Userupdate.lastName}"  TextColor="Black" MaxLength="30"/>
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurupdate_lastNameError" IsVisible="False" TextColor="Red" Margin="50,-15,0,0" FontAttributes="Bold"/>
+            <sf:SfTextInputLayout Hint="{loc:Translate Genre}" ContainerType="Filled" ContainerBackground="#fcf3e8" HeightRequest="80" WidthRequest="270">
+                <Picker Title="{Binding StrGenre}" BackgroundColor="Transparent" TextColor="Black" SelectedItem="{Binding Userupdate.gender}">
+                    <Picker.Items>
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                    </Picker.Items>
+                </Picker>
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurupdate_genderError" IsVisible="False" TextColor="Red"  Margin="50,-15,0,0" FontAttributes="Bold" />
+            <sf:SfTextInputLayout Hint="{loc:Translate WhatsApp}" ContainerBackground="#fcf3e8" ContainerType="Filled" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Userupdate.numWhatsApp}" Keyboard="Telephone" TextColor="Black" MaxLength="30"/>
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurupdate_numWhatsAppError" IsVisible="False" TextColor="Red" Margin="50,-15,0,0" FontAttributes="Bold" />
+            <sf:SfTextInputLayout Hint="{loc:Translate EmailInput}" ContainerType="Filled" ContainerBackground="#fcf3e8" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Userupdate.email}" Keyboard="Email" TextColor="Black"/>
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurupdate_emailError" IsVisible="False" TextColor="Red" Margin="50,-15,0,0" FontAttributes="Bold" />
+            <sf:SfTextInputLayout Hint="{loc:Translate Pays}" ContainerType="Filled" ContainerBackground="#fcf3e8" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Userupdate.country} " TextColor="Black" MaxLength="30" />
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurupdate_countryError" IsVisible="False" TextColor="Red" Margin="50,-15,0,0" FontAttributes="Bold"/>
+            <sf:SfTextInputLayout Hint="{loc:Translate Ville}" ContainerType="Filled" ContainerBackground="#fcf3e8" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Userupdate.city}" TextColor="Black" MaxLength="30"/>
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurupdate_cityError" IsVisible="False" TextColor="Red" Margin="50,-15,0,0" FontAttributes="Bold" />
+            <sf:SfTextInputLayout Hint="{loc:Translate CodePostal}" ContainerType="Filled" ContainerBackground="#fcf3e8" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Userupdate.postalCode}" TextColor="Black"  Keyboard="Numeric" MaxLength="30"/>
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurupdate_postalCodeError" IsVisible="False" TextColor="Red" Margin="50,-15,0,0" FontAttributes="Bold" />
+            <sf:SfTextInputLayout Hint="{loc:Translate Adresse}" ContainerType="Filled" ContainerBackground="#fcf3e8" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Userupdate.address}" TextColor="Black" MaxLength="30"/>
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurupdate_addressError" IsVisible="False" TextColor="Red" Margin="50,-15,0,0" FontAttributes="Bold" />
+            <sf:SfTextInputLayout Hint="{loc:Translate Langue}" ContainerType="Filled" ContainerBackground="#fcf3e8" HeightRequest="80" WidthRequest="270">
+                <Picker Title="{Binding Strlangue}" BackgroundColor="Transparent" TextColor="Black" SelectedItem="{Binding Userupdate.language}">
+                    <Picker.Items>
+                        <x:String>fr</x:String>
+                        <x:String>ar</x:String>
+                        <x:String>an</x:String>
+
+                    </Picker.Items>
+                </Picker>
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurupdate_languageError" IsVisible="False" TextColor="Red" Margin="50,-15,0,0" FontAttributes="Bold" />
+       
+            <Button Text="{loc:Translate MiseJour}"    BackgroundColor="#cd7100"  TextColor="White"  FontAttributes="Bold"      WidthRequest="200" HeightRequest="40"
+ Margin="0,24,0,0" FontSize="19"
+
+         
+            Command="{Binding UpdateUserCommand}" CommandParameter="{x:Reference miseajourroot}"  />
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

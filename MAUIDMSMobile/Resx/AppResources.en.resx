@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accepter" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="AddressRequis" xml:space="preserve">
+    <value>Address is required</value>
+  </data>
+  <data name="Adresse" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AjoutVéhicule" xml:space="preserve">
+    <value>Add vehicle</value>
+  </data>
+  <data name="Anglais" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Annuler" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Arab" xml:space="preserve">
+    <value>Arabic</value>
+  </data>
+  <data name="AttenteValidation" xml:space="preserve">
+    <value>Pending validation</value>
+  </data>
+  <data name="AvoirCompte" xml:space="preserve">
+    <value>Already have an account?</value>
+  </data>
+  <data name="Bienvenue" xml:space="preserve">
+    <value>Welcome!</value>
+  </data>
+  <data name="CarteGrise" xml:space="preserve">
+    <value>Registration card photo *</value>
+  </data>
+  <data name="Centres__" xml:space="preserve">
+    <value>Service centers</value>
+  </data>
+  <data name="Centre__" xml:space="preserve">
+    <value>Service center:</value>
+  </data>
+  <data name="Codecentre__" xml:space="preserve">
+    <value>Center code:</value>
+  </data>
+  <data name="Codepackentretien__" xml:space="preserve">
+    <value>Maintenance package code:</value>
+  </data>
+  <data name="CodePostal" xml:space="preserve">
+    <value>Postal code</value>
+  </data>
+  <data name="CodePostalRequis" xml:space="preserve">
+    <value>Postal code is required</value>
+  </data>
+  <data name="Connecter" xml:space="preserve">
+    <value>      Log in</value>
+  </data>
+  <data name="CreationCompte" xml:space="preserve">
+    <value>  Account creation</value>
+  </data>
+  <data name="CreationVehicule" xml:space="preserve">
+    <value>Create a vehicle</value>
+  </data>
+  <data name="CreerCompte" xml:space="preserve">
+    <value>Create an account</value>
+  </data>
+  <data name="Creneau" xml:space="preserve">
+    <value>Slot</value>
+  </data>
+  <data name="Creneauxd" xml:space="preserve">
+    <value>Available slots</value>
+  </data>
+  <data name="Creneauxsel" xml:space="preserve">
+    <value>Selected slots:</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="DateCirculation" xml:space="preserve">
+    <value>Date of registration *</value>
+  </data>
+  <data name="DateCirculation__" xml:space="preserve">
+    <value>Date of registration :</value>
+  </data>
+  <data name="DateHeure__" xml:space="preserve">
+    <value>Date and time:</value>
+  </data>
+  <data name="Dateplanifie__" xml:space="preserve">
+    <value>Planned date:</value>
+  </data>
+  <data name="Deconnecter" xml:space="preserve">
+    <value>Disconnect</value>
+  </data>
+  <data name="DeconnecterPoPUp" xml:space="preserve">
+    <value>Do you want to log out?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="detaildevis" xml:space="preserve">
+    <value>The quote details</value>
+  </data>
+  <data name="Devis" xml:space="preserve">
+    <value>My quotes</value>
+  </data>
+  <data name="Dure__" xml:space="preserve">
+    <value>Duration (min):</value>
+  </data>
+  <data name="EchecConexion" xml:space="preserve">
+    <value>Login Failed</value>
+  </data>
+  <data name="EmailInput" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailRequis" xml:space="preserve">
+    <value>Email address is required</value>
+  </data>
+  <data name="Email_" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Ensavoirplus" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="EreurAttendValidation" xml:space="preserve">
+    <value>Error: Your account is pending validation</value>
+  </data>
+  <data name="EreurCompteBlock" xml:space="preserve">
+    <value>Error: Your account is blocked</value>
+  </data>
+  <data name="EreurCompteBlockeOuAttent" xml:space="preserve">
+    <value>Error: Account blocked or pending validation</value>
+  </data>
+  <data name="EreurDateInvalide" xml:space="preserve">
+    <value>Error: Invalid first registration date</value>
+  </data>
+  <data name="EreurDejaexist" xml:space="preserve">
+    <value>Error: User already exists</value>
+  </data>
+  <data name="EreurEnvoieEmail" xml:space="preserve">
+    <value>Error: Error while sending the email</value>
+  </data>
+  <data name="EreurGenre" xml:space="preserve">
+    <value>Error: Invalid gender</value>
+  </data>
+  <data name="EreurImatriculationinvalide" xml:space="preserve">
+    <value>Error: Invalid registration number</value>
+  </data>
+  <data name="EreurInconnu" xml:space="preserve">
+    <value>Error: unknown</value>
+  </data>
+  <data name="EreurMarqueInconnu" xml:space="preserve">
+    <value>Error: Unknown brand</value>
+  </data>
+  <data name="EreurModelInconnu" xml:space="preserve">
+    <value>Error: Unknown model</value>
+  </data>
+  <data name="EreurMpIncorect" xml:space="preserve">
+    <value>Error: Incorrect password</value>
+  </data>
+  <data name="EreurNumChasiinvalide" xml:space="preserve">
+    <value>Error: Invalid chassis number</value>
+  </data>
+  <data name="EreurNumChassiexiste" xml:space="preserve">
+    <value>Error: Chassis number already registered</value>
+  </data>
+  <data name="Ereurobilgatoire" xml:space="preserve">
+    <value>Error: Missing required fields</value>
+  </data>
+  <data name="EreurPhoto" xml:space="preserve">
+    <value>Error: Invalid registration card photo</value>
+  </data>
+  <data name="Ereurservenue" xml:space="preserve">
+    <value>An error has occurred:</value>
+  </data>
+  <data name="EreurUserInvalide" xml:space="preserve">
+    <value>Error: Invalid mobile user</value>
+  </data>
+  <data name="EreurUserNonTrouvé" xml:space="preserve">
+    <value>Error: User not found</value>
+  </data>
+  <data name="ErreurAllert" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Francais" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="GenderRequis" xml:space="preserve">
+    <value>Gender is required</value>
+  </data>
+  <data name="Genre" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="Heureplanifie__" xml:space="preserve">
+    <value>Planned time:</value>
+  </data>
+  <data name="Historique" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="HistoriquePage" xml:space="preserve">
+    <value>history page</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>homepage</value>
+  </data>
+  <data name="Immatriculation" xml:space="preserve">
+    <value>Registration *</value>
+  </data>
+  <data name="Immatriculation__" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="Inscrire" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="Kilométrage" xml:space="preserve">
+    <value>Mileage:</value>
+  </data>
+  <data name="LanguageRequis" xml:space="preserve">
+    <value>Language is required</value>
+  </data>
+  <data name="Langue" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Marque" xml:space="preserve">
+    <value>Brand *</value>
+  </data>
+  <data name="Marque__" xml:space="preserve">
+    <value>Brand :</value>
+  </data>
+  <data name="MenuVehicule" xml:space="preserve">
+    <value>My vehicles</value>
+  </data>
+  <data name="MesRendezVousPage" xml:space="preserve">
+    <value>Appointments page</value>
+  </data>
+  <data name="Mesvehicule" xml:space="preserve">
+    <value>Vehicles page</value>
+  </data>
+  <data name="MiseAjourOk" xml:space="preserve">
+    <value>Update successful</value>
+  </data>
+  <data name="MiseCompte" xml:space="preserve">
+    <value>Account Update</value>
+  </data>
+  <data name="MiseJour" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Modele" xml:space="preserve">
+    <value>Model *</value>
+  </data>
+  <data name="Modle__" xml:space="preserve">
+    <value>Model:</value>
+  </data>
+  <data name="MonCompte" xml:space="preserve">
+    <value>My account</value>
+  </data>
+  <data name="Montant" xml:space="preserve">
+    <value>Amount:</value>
+  </data>
+  <data name="Mp" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="MpOublie" xml:space="preserve">
+    <value>  Forgot password?</value>
+  </data>
+  <data name="MpRequis" xml:space="preserve">
+    <value>Password is required</value>
+  </data>
+  <data name="ndevis__" xml:space="preserve">
+    <value>Quote Number:</value>
+  </data>
+  <data name="Nom" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="Nomcentre__" xml:space="preserve">
+    <value>Center name:</value>
+  </data>
+  <data name="NomRequis" xml:space="preserve">
+    <value>Last name is required</value>
+  </data>
+  <data name="Non" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Numchass__" xml:space="preserve">
+    <value>Chassis number :</value>
+  </data>
+  <data name="Numerochassis" xml:space="preserve">
+    <value>Chassis number *</value>
+  </data>
+  <data name="numWhatsApp" xml:space="preserve">
+    <value>WhatsApp number is required</value>
+  </data>
+  <data name="Numrocrneau__" xml:space="preserve">
+    <value>Slot number:</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Oui" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="PackEntretien__" xml:space="preserve">
+    <value>Maintenance package:</value>
+  </data>
+  <data name="Packsmaintenance__" xml:space="preserve">
+    <value>Maintenance packages</value>
+  </data>
+  <data name="pageCreationCompte" xml:space="preserve">
+    <value>Account creation page</value>
+  </data>
+  <data name="pagedevis" xml:space="preserve">
+    <value>Quotation page</value>
+  </data>
+  <data name="PasCompte" xml:space="preserve">
+    <value>Don't have an account?</value>
+  </data>
+  <data name="PasConexion" xml:space="preserve">
+    <value>No internet connection. Please check your connection and try again.</value>
+  </data>
+  <data name="Pays" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="PaysRequis" xml:space="preserve">
+    <value>Country is required</value>
+  </data>
+  <data name="Photo2" xml:space="preserve">
+    <value>Photo2</value>
+  </data>
+  <data name="Photo3" xml:space="preserve">
+    <value>Photo 3</value>
+  </data>
+  <data name="Prenom" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="PrenomRequis" xml:space="preserve">
+    <value>First name is required</value>
+  </data>
+  <data name="Refuser" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="RendezVous" xml:space="preserve">
+    <value>My appointments</value>
+  </data>
+  <data name="RenitialisationOk" xml:space="preserve">
+    <value>Reset successful</value>
+  </data>
+  <data name="Renitialise" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Réinitialiser" xml:space="preserve">
+    <value>Reset password</value>
+  </data>
+  <data name="Rserver" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="Rserverrdv" xml:space="preserve">
+    <value>Book an appointment</value>
+  </data>
+  <data name="scentre" xml:space="preserve">
+    <value>Select a service center</value>
+  </data>
+  <data name="screnaux" xml:space="preserve">
+    <value>Select available slots</value>
+  </data>
+  <data name="Session" xml:space="preserve">
+    <value>Keep me logged in</value>
+  </data>
+  <data name="sKilomtrage" xml:space="preserve">
+    <value>Enter mileage</value>
+  </data>
+  <data name="Slogan" xml:space="preserve">
+    <value>  Your journey in full peace.</value>
+  </data>
+  <data name="Statut__" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="Succes" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="svehicule" xml:space="preserve">
+    <value>Select a vehicle</value>
+  </data>
+  <data name="Updateok" xml:space="preserve">
+    <value>Update successful</value>
+  </data>
+  <data name="Valider" xml:space="preserve">
+    <value>Validate</value>
+  </data>
+  <data name="VehiculeCreeSucces" xml:space="preserve">
+    <value>Vehicle created successfully</value>
+  </data>
+  <data name="Ville" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="VilleRequis" xml:space="preserve">
+    <value>City is required</value>
+  </data>
+  <data name="VéhiculesValidés" xml:space="preserve">
+    <value>Validated vehicles</value>
+  </data>
+  <data name="WhatsApp" xml:space="preserve">
+    <value>WhatsApp number</value>
+  </data>
+  <data name="Kilometrage__" xml:space="preserve">
+    <value>Mileage</value>
+  </data>
+  <data name="comptesucces" xml:space="preserve">
+    <value>The account has been successfully created</value>
+  </data>
+  <data name="ereurcartegrise" xml:space="preserve">
+    <value>The vehicle registration card photo is required</value>
+  </data>
+  <data name="ereurdateimmatriculation" xml:space="preserve">
+    <value>The registration date is required</value>
+  </data>
+  <data name="ereurimtriculation" xml:space="preserve">
+    <value>The registration number is required</value>
+  </data>
+  <data name="ereurmarque" xml:space="preserve">
+    <value>The brand is required</value>
+  </data>
+  <data name="ereurmodel" xml:space="preserve">
+    <value>The model is required</value>
+  </data>
+  <data name="ereurnchassis" xml:space="preserve">
+    <value>The chassis number is required</value>
+  </data>
+  <data name="messageok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="devisaccpte" xml:space="preserve">
+    <value>The quote has been accepted</value>
+  </data>
+  <data name="devisrefus" xml:space="preserve">
+    <value>The quote has been rejected</value>
+  </data>
+  <data name="crenauxinf" xml:space="preserve">
+    <value>The selected time slots are not consecutive or are insufficient</value>
+  </data>
+  <data name="crenauxpasvalide" xml:space="preserve">
+    <value>The time slots or the pack are not valid</value>
+  </data>
+  <data name="rdzechoue" xml:space="preserve">
+    <value>Appointment booking failed</value>
+  </data>
+  <data name="spack" xml:space="preserve">
+    <value>Select a maintenance package</value>
+  </data>
+  <data name="bookedok" xml:space="preserve">
+    <value>Appointment successfully booked</value>
+  </data>
+  <data name="hrendezvous" xml:space="preserve">
+    <value>Appointment history</value>
+  </data>
+  <data name="doitremplir" xml:space="preserve">
+    <value>Please fill in all the fields</value>
+  </data>
+  <data name="log" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="packinsufisant" xml:space="preserve">
+    <value>The selected time slots are not consecutive, or they must exactly cover the duration of the pack</value>
+  </data>
+</root>

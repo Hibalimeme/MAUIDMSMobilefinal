@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIDMSMobile.Mvvm.Views.CreationComptePage"
+             xmlns:vm="clr-namespace:MAUIDMSMobile.Mvvm.ViewModels"
+      
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+             x:Name="CreationComptePageroot"
+             xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+             xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+             NavigationPage.HasNavigationBar="False"
+             Title="{loc:Translate pageCreationCompte}">
+    
+    <!--<ContentPage.ToolbarItems>
+        --><!-- Ajouter un logo dans la barre d'outils --><!--
+        <ToolbarItem IconImageSource="logob2m.png" />
+    </ContentPage.ToolbarItems>-->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#ffe5c3" Offset="0.0" />
+            <GradientStop Color="#f9c27b" Offset="0.6" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Label Text="{loc:Translate CreationCompte}" FontFamily="Times New Roman" FontSize="30"
+                 TextColor="#eb8126" Margin="30,25,0,25" FontAttributes="Bold"/>
+            <ActivityIndicator
+             
+x:Name="activityIndicator"
+IsEnabled="{Binding IsBusy}"
+IsRunning="{Binding IsBusy}"
+IsVisible="{Binding IsBusy}" />
+            <sf:SfTextInputLayout ContainerBackground="#fcf3e8" ContainerType="Filled" Hint="{loc:Translate Prenom}"  HeightRequest="80" WidthRequest="270" Margin="0,0,0,0">
+                <Entry Text="{Binding Usercreationdecompte.firstName}"  TextColor="Black" MaxLength="30" />
+            </sf:SfTextInputLayout>
+
+
+            <Label x:Name="Utilisateurcreationdecompte_firstNameError" IsVisible="False" TextColor="Red" Margin="30,-15,0,0" FontAttributes="Bold" />
+
+            <sf:SfTextInputLayout ContainerBackground="#fcf3e8" ContainerType="Filled" Hint="{loc:Translate Nom}" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Usercreationdecompte.lastName}"  TextColor="Black" MaxLength="30" />
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurcreationdecompte_lastNameError" IsVisible="False" TextColor="Red" Margin="30,-15,0,0" FontAttributes="Bold" />
+            <sf:SfTextInputLayout Hint="{loc:Translate Genre}" ContainerType="Filled" ContainerBackground="#fcf3e8" HeightRequest="80" WidthRequest="270">
+                <Picker Title="{Binding StrGenre}" BackgroundColor="Transparent" TextColor="Black" SelectedItem="{Binding Usercreationdecompte.gender}" >
+                    <Picker.Items>
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                    </Picker.Items>
+                </Picker>
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurcreationdecompte_genderError" IsVisible="False" TextColor="Red" Margin="30,-15,0,0" FontAttributes="Bold" />
+
+            <sf:SfTextInputLayout ContainerBackground="#fcf3e8" ContainerType="Filled" Hint="{loc:Translate WhatsApp}" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Usercreationdecompte.numWhatsApp}"  Keyboard="Telephone"  TextColor="Black" MaxLength="30" />
+            </sf:SfTextInputLayout>
+
+            <Label x:Name="Utilisateurcreationdecompte_numWhatsAppError" IsVisible="False" TextColor="Red" Margin="30,-15,0,0" FontAttributes="Bold" />
+
+            <sf:SfTextInputLayout ContainerBackground="#fcf3e8" ContainerType="Filled" Hint="{loc:Translate EmailInput}" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Usercreationdecompte.email}"  Keyboard="Email"  MaxLength="60"  TextColor="Black"/>
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurcreationdecompte_emailError" IsVisible="False" TextColor="Red" Margin="30,-15,0,0" FontAttributes="Bold"/>
+
+            <sf:SfTextInputLayout ContainerBackground="#fcf3e8" ContainerType="Filled" Hint="{loc:Translate Pays}" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Usercreationdecompte.country}"  TextColor="Black" MaxLength="30" />
+            </sf:SfTextInputLayout>
+            <Label x:Name="Utilisateurcreationdecompte_countryError" IsVisible="False" TextColor="Red" Margin="30,-15,0,0" FontAttributes="Bold" />
+
+            <sf:SfTextInputLayout ContainerBackground="#fcf3e8" ContainerType="Filled" Hint="{loc:Translate Ville}" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Usercreationdecompte.city}"   TextColor="Black" MaxLength="30" />
+            </sf:SfTextInputLayout>
+
+            <Label x:Name="Utilisateurcreationdecompte_cityError" IsVisible="False" TextColor="Red" Margin="30,-15,0,0" FontAttributes="Bold" />
+
+            <sf:SfTextInputLayout  ContainerBackground="#fcf3e8" ContainerType="Filled" Hint="{loc:Translate CodePostal}" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Usercreationdecompte.postalCode}" MaxLength="100"  Keyboard="Numeric"  TextColor="Black"/>
+            </sf:SfTextInputLayout>
+
+            <Label x:Name="Utilisateurcreationdecompte_postalCodeError" IsVisible="False" TextColor="Red" Margin="30,-15,0,0"  FontAttributes="Bold" />
+
+            <sf:SfTextInputLayout ContainerBackground="#fcf3e8" ContainerType="Filled" Hint="{loc:Translate Adresse}" HeightRequest="80" WidthRequest="270">
+                <Entry Text="{Binding Usercreationdecompte.address}" MaxLength="100"  TextColor="Black" />
+            </sf:SfTextInputLayout>
+
+            <Label x:Name="Utilisateurcreationdecompte_addressError" IsVisible="False" TextColor="Red" Margin="30,-15,0,0" FontAttributes="Bold" />
+
+            <sf:SfTextInputLayout Hint="{loc:Translate Langue}" ContainerType="Filled" ContainerBackground="#fcf3e8" HeightRequest="80" WidthRequest="270">
+                <Picker Title="{Binding Strlangue}" BackgroundColor="Transparent"  TextColor="Black" SelectedItem="{Binding Usercreationdecompte.language}">
+                    <Picker.Items>
+                        <x:String>fr</x:String>
+                        <x:String>ar</x:String>
+                        <x:String>en</x:String>
+
+                    </Picker.Items>
+                </Picker>
+            </sf:SfTextInputLayout>
+
+            <Label x:Name="Utilisateurcreationdecompte_languageError" IsVisible="False" TextColor="Red" Margin="30,-15,0,0" FontAttributes="Bold" />
+
+            <Button Text="{loc:Translate Inscrire}"  TextColor="White"  FontAttributes="Bold"   BackgroundColor="#cd7100"   WidthRequest="200" HeightRequest="40"
+ Margin="0,24,0,0" FontSize="19"
+  Command="{Binding CreateUserCommand}" CommandParameter="{x:Reference CreationComptePageroot}"/>
+            <Label 
+ Text="{Binding creatresult}" 
+ TextColor="Red" 
+ VerticalOptions="CenterAndExpand" 
+ HorizontalOptions="CenterAndExpand" />
+            <Label Text="{loc:Translate AvoirCompte}" Margin="0,12,0,40"
+    VerticalTextAlignment="Center" 
+    HorizontalTextAlignment="Center"
+    TextColor="Black"
+    />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <BoxView BackgroundColor="White" HeightRequest="1" Margin="5,-30,5,0" WidthRequest="60" VerticalOptions="Center" />
+
+                <Button Text="{loc:Translate log}"
+        FontAttributes="Bold"
+        FontSize="20"
+                     Margin="5,-20,5,0"
+        TextColor="#cd7100"
+        BackgroundColor="Transparent"
+        Command="{Binding ConnecterCommand}" />
+                <BoxView BackgroundColor="White" HeightRequest="1"  Margin="5,-30,5,0" WidthRequest="60" VerticalOptions="Center" />
+            </StackLayout>
+            
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

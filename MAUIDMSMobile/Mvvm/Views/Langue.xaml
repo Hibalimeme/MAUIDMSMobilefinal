@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+     x:Class="MAUIDMSMobile.Mvvm.Views.Langue"
+    xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+    InputTransparent="False"
+    xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+    xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#80000000">
+    <Border
+  
+   Stroke="Transparent"
+   StrokeShape="RoundRectangle 25"
+   BackgroundColor="#fee4c4"
+   Margin="0,20,0,0"
+   WidthRequest="330"
+        HeightRequest="200"
+   
+   HorizontalOptions="Center"
+   VerticalOptions="Center">
+
+        <VerticalStackLayout >
+
+            <Label Text="{loc:Translate Langue}"
+               FontAttributes="Bold"
+               FontSize="21"
+               Margin="0,10"
+               TextColor="#eb8126"
+               HorizontalOptions="Center"/>
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="CenterAndExpand" Margin="0,-10,0,0">
+        <!-- Première ImageButton avec Label -->
+        <StackLayout HorizontalOptions="CenterAndExpand" >
+            <ImageButton Source="france.png" WidthRequest="60" HeightRequest="100" Clicked="OnFranceButtonClicked"/>
+                    <Label  Text="{loc:Translate Francais}"  HorizontalOptions="Center"  TextColor="#eb8126" FontAttributes="Bold"/>
+                </StackLayout> 
+
+                <!-- Deuxième ImageButton avec Label -->
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <ImageButton Source="angletaire.png" WidthRequest="60" HeightRequest="100" Clicked="OnangletaireButtonClicked"/>
+                    <Label Text="{loc:Translate Anglais}" HorizontalOptions="Center"  TextColor="#eb8126" FontAttributes="Bold"/>
+        </StackLayout>
+
+        <!-- Troisième ImageButton avec Label -->
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <ImageButton Source="drapeaulibye.png" WidthRequest="60" HeightRequest="100" Clicked="OnlibyeButtonClicked"/>
+                    <Label Text="{loc:Translate Arab}" HorizontalOptions="Center"  TextColor="#eb8126" FontAttributes="Bold"/>
+        </StackLayout>
+    </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+    </Border>
+</mopups:PopupPage>

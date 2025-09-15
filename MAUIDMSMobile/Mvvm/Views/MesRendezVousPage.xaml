@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIDMSMobile.Mvvm.Views.MesRendezVousPage"
+             xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+             xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+             Title="{loc:Translate MesRendezVousPage}">
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="logob2m.png" />
+    </ContentPage.ToolbarItems>-->
+
+    <ScrollView>
+      
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                     <RowDefinition Height="Auto" /> 
+                </Grid.RowDefinitions>
+
+
+                <!-- Entête de la page -->
+            <BoxView Grid.Row="0" HeightRequest="57" VerticalOptions="Start">
+                <BoxView.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#f2c08f" Offset="0.1" />
+                        <GradientStop Color="#ecb073" Offset="0.7" />
+                    </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>
+            <Border StrokeShape="RoundRectangle 15,15,15,15"
+                  Stroke="Transparent"
+                WidthRequest ="200" HeightRequest="45"
+                 StrokeThickness="1"
+                 VerticalOptions="FillAndExpand">
+                    <Label Grid.Row="0"
+           Text="{loc:Translate RendezVous}"
+
+FontFamily="Times New Roman"
+FontSize="25"
+TextColor="#eb8126"
+ FontAttributes="Bold"
+HorizontalOptions="Center"
+VerticalOptions="Center" />
+                </Border>
+                <BoxView Grid.Row="1" BackgroundColor="#eb8126" HeightRequest="2" HorizontalOptions="Fill" />
+
+                <VerticalStackLayout Grid.Row="2" Padding="10">
+                    <VerticalStackLayout.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#ffdbad" Offset="0.0" />
+                        <GradientStop Color="#f9c27b" Offset="0.6" />
+                    </LinearGradientBrush>
+                </VerticalStackLayout.Background>
+                    <ImageButton Source="plus.png"
+         WidthRequest="50"
+         HeightRequest="50"
+        
+         Command="{Binding OpenPopupClickedCommand}"
+         Margin="0,10,0,0"
+         HorizontalOptions="Center" 
+         />
+
+
+                <ActivityIndicator
+                     Grid.Row="3"
+      x:Name="activityIndicatorrendezvous"
+      IsEnabled="{Binding IsBusy}"
+      IsRunning="{Binding IsBusy}"
+      IsVisible="{Binding IsBusy}" />
+
+                <!-- Contenu principal -->
+                    <VerticalStackLayout Grid.Row="4" Padding="10">
+
+
+                    <CollectionView ItemsSource="{Binding RendezvousList}"  ItemSizingStrategy="MeasureFirstItem" >
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                <Frame BackgroundColor="#ffe1bc" BorderColor="#954500" CornerRadius="15" Margin="10">
+
+
+                                    <VerticalStackLayout Padding="0">
+
+                                            <!-- Heure programmée -->
+                                            <Label Margin="10,0,0,0"
+   HorizontalOptions="StartAndExpand"
+
+   VerticalOptions="Center">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                    <Span Text="{loc:Translate Numrocrneau__}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding NumeroCreneau}" TextColor="#954500" FontAttributes="Bold" />
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            <!-- Identifiant utilisateur -->
+                                            <Label Margin="10,0,0,0"
+   HorizontalOptions="StartAndExpand"
+
+   VerticalOptions="Center">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                    <Span Text="{loc:Translate Dateplanifie__}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding DatePlanifiee}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            <!-- Identifiant véhicule -->
+                                            <Label Margin="10,0,0,0"
+   HorizontalOptions="StartAndExpand"
+
+   VerticalOptions="Center">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+
+                                                    <Span Text="{loc:Translate Heureplanifie__}" TextColor="#954500" FontAttributes="Bold" />
+                                                    <Span Text="{Binding HeurePlanifiee}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            <!-- Marque --><!--
+                                            <Label Margin="10,0,0,0"
+
+   VerticalOptions="Center">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                    <Span Text="{loc:Translate Marque__}" TextColor="#954500" FontAttributes="Bold"/>
+                                                        <Span Text="{Binding Marque}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            --><!-- Modèle --><!--
+                                            <Label Margin="10,0,0,0"
+   HorizontalOptions="StartAndExpand"
+
+   VerticalOptions="Center">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                    <Span Text="{loc:Translate Modle__}" TextColor="#954500" FontAttributes="Bold"/>
+                                                        <Span Text="{Binding Modele}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            --><!-- Numéro de châssis --><!--
+                                            <Label Margin="10,0,0,0"
+   HorizontalOptions="StartAndExpand"
+
+   VerticalOptions="Center">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                    <Span Text="{loc:Translate Numchass__}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding NumeroChassis}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            --><!-- Code pack maintenance --><!--
+                                            <Label Margin="10,0,0,0"
+   HorizontalOptions="StartAndExpand"
+
+   VerticalOptions="Center">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                    <Span Text="{loc:Translate Codepackentretien__}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding CodePackEntretien}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+                                            --><!-- Kilométrage --><!--
+                                            <Label Margin="10,0,0,0"
+   HorizontalOptions="StartAndExpand"
+
+   VerticalOptions="Center">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                    <Span Text="{loc:Translate Kilometrage__}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding Kilometrage}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>-->
+
+                                      
+                                            <!-- Centre -->
+                                            <Label Margin="10,0,0,0"
+   HorizontalOptions="StartAndExpand"
+ 
+   VerticalOptions="Center">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                    <Span Text="{loc:Translate Codecentre__}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding CodeBox}" TextColor="#954500" FontAttributes="Bold"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+
+
+                                        </VerticalStackLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Grid>
+
+        
+     
+            
+    </ScrollView>
+
+</ContentPage>

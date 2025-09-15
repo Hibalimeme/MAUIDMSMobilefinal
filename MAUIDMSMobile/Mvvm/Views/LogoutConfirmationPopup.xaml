@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    x:Class="MAUIDMSMobile.Mvvm.Views.LogoutConfirmationPopup"
+    xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+    xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+     xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+      NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#80000000">
+    <Border
+    
+     Stroke="Transparent"
+     StrokeShape="RoundRectangle 25"
+     BackgroundColor="#fee4c4"
+     Margin="0,20,0,0"
+     WidthRequest="330"
+     
+     HorizontalOptions="Center"
+     VerticalOptions="Center">
+        <VerticalStackLayout
+        BackgroundColor="#fee4c4"
+        Padding="20"
+        WidthRequest="300"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Spacing="20">
+
+        <Label Text="{loc:Translate DeconnecterPoPUp}"
+               
+               FontSize="18"
+               TextColor="Black"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center" FontAttributes="Bold" />
+
+        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+            <Button Text="{loc:Translate Oui}"
+                    BackgroundColor="#cd7100" 
+                    TextColor="White"
+                    WidthRequest="100"
+                    Clicked="OnYesClicked" FontAttributes="Bold"/>
+
+            <Button Text="{loc:Translate Non}"
+                    BackgroundColor="#cd7100"
+                    TextColor="White"
+                    WidthRequest="100"
+                    Clicked="OnNoClicked" FontAttributes="Bold"/>
+            
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+    </Border>
+</mopups:PopupPage>

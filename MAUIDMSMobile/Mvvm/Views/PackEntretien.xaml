@@ -1,0 +1,118 @@
+<mopups:PopupPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    x:Class="MAUIDMSMobile.Mvvm.Views.PackEntretien"
+    xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+    xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+    x:Name="PacklstView"
+    xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+     NavigationPage.HasNavigationBar="False"    
+    BackgroundColor="#80000000">
+
+    <Border Stroke="Transparent"
+            StrokeShape="RoundRectangle 25"
+            BackgroundColor="#fee4c4"
+            Margin="10"
+           HeightRequest="700"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+       
+        <VerticalStackLayout>
+            
+            <ImageButton 
+    Source="x.png"
+    WidthRequest="4"
+    HeightRequest="3"
+    Margin="0,0,0,0"
+    Clicked="ClosePopup_Clicked"
+    BackgroundColor="Transparent"
+    BorderColor="Transparent"
+/>
+            <Label Text="{loc:Translate Packsmaintenance__}"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                     Margin="0,-7,0,0"
+                   TextColor="#eb8126"
+                   HorizontalOptions="Center"
+                 />
+            <ScrollView>
+            <CollectionView ItemsSource="{Binding PackService}" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border StrokeShape="RoundRectangle 15,15,15,15"
+                    BackgroundColor="#ffe1bc"
+                    Stroke="#954500" 
+Margin="5,5,5,0"
+                    StrokeThickness="1"
+                    VerticalOptions="FillAndExpand">
+                            <VerticalStackLayout>
+                                <Label Margin="10,0,0,0"
+       HorizontalOptions="StartAndExpand"
+       VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{loc:Translate Codepackentretien__}" TextColor="#954500" FontAttributes="Bold" />
+                                            <Span Text="{Binding CodePackMaintenance}" TextColor="#954500" FontAttributes="Bold" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label Margin="10,0,0,0"
+       HorizontalOptions="StartAndExpand"
+       VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{loc:Translate Marque__}" TextColor="#954500" FontAttributes="Bold" />
+                                            <Span Text="{Binding Marque}" TextColor="#954500" FontAttributes="Bold" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label Margin="10,0,0,0"
+       HorizontalOptions="StartAndExpand"
+       VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{loc:Translate Modle__}" TextColor="#954500" FontAttributes="Bold" />
+                                            <Span Text="{Binding Modele}" TextColor="#954500" FontAttributes="Bold" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label Margin="10,0,0,0"
+       HorizontalOptions="StartAndExpand"
+       VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{loc:Translate Kilometrage__}" TextColor="#954500" FontAttributes="Bold" />
+                                            <Span Text="{Binding Kilometrage}" TextColor="#954500" FontAttributes="Bold" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label Margin="10,0,0,0"
+       HorizontalOptions="StartAndExpand"
+       VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{loc:Translate Dure__}" TextColor="#954500" FontAttributes="Bold" />
+                                            <Span Text="{Binding DureeEnMinutes}" TextColor="#954500" FontAttributes="Bold" />
+                                        </FormattedString> 
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <VerticalStackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference PacklstView}, Path=BindingContext.PackSelectedCommand}" CommandParameter="{Binding .}"/>
+                                </VerticalStackLayout.GestureRecognizers>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </VerticalStackLayout>
+
+    </Border>
+</mopups:PopupPage>

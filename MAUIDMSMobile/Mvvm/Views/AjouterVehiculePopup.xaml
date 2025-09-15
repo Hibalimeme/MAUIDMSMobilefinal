@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    x:Class="MAUIDMSMobile.Mvvm.Views.AjouterVehiculePopup"
+                 xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+    xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+InputTransparent="False"
+    xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+     NavigationPage.HasNavigationBar="False"
+    xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+    x:Name="VehiculePopup"
+    BackgroundColor="#80000000">
+    <Border
+       
+        Stroke="Transparent"
+        StrokeShape="RoundRectangle 25"
+        BackgroundColor="#fee4c4"
+        Margin="0,20,0,0"
+        WidthRequest="330"
+        
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+    <ScrollView  HorizontalOptions="Center" HeightRequest="600" 
+        VerticalOptions="Center">
+        <VerticalStackLayout 
+        BackgroundColor="#fee4c4"
+        Padding="20"
+        WidthRequest="300"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Spacing="10">
+                <ImageButton 
+    Source="x.png"
+    WidthRequest="4"
+    HeightRequest="3"
+    Margin="0,0,0,0"
+    Clicked="ClosePopup_Clicked"
+    BackgroundColor="Transparent"
+    BorderColor="Transparent"
+/>
+
+
+               
+                
+                <Label Grid.Row="0"
+    Text="{loc:Translate AjoutVéhicule}"  FontAttributes="Bold"
+    FontFamily="Times New Roman"
+    FontSize="25"
+    TextColor="#eb8126"
+    
+    HorizontalOptions="Center"
+    VerticalOptions="Center" />
+
+        
+                <ActivityIndicator
+             
+x:Name="activityIndicator"
+IsEnabled="{Binding IsBusy}"
+IsRunning="{Binding IsBusy}"
+IsVisible="{Binding IsBusy}" />
+                <sf:SfTextInputLayout 
+    ContainerType="Filled" 
+    Hint="{loc:Translate Modele}" 
+    ContainerBackground="#fcf3e8" 
+HeightRequest="80" WidthRequest="270"
+    Padding="0"
+    VerticalOptions="Center">
+
+            <Picker 
+        ItemsSource="{Binding Models}" 
+        SelectedItem="{Binding SelectedNo}" 
+       
+        TextColor="Black"
+        FontSize="14"
+        HeightRequest="40"
+         />
+                </sf:SfTextInputLayout> 
+                <Label x:Name="VehiculeModel_ModeleError" HorizontalTextAlignment="Start" 
+           TextColor="Red" IsVisible="False" Margin="10,-10,0,0" FontAttributes="Bold"/>
+
+                <sf:SfTextInputLayout 
+    ContainerType="Filled" 
+    Hint="{loc:Translate Marque}" 
+    ContainerBackground="#fcf3e8" 
+HeightRequest="80" WidthRequest="270"
+    Padding="0"
+    VerticalOptions="Center">
+
+            <Picker 
+        ItemsSource="{Binding Marques}" 
+        SelectedItem="{Binding SelectedBrand, Mode=TwoWay}" 
+       
+        TextColor="Black"
+        FontSize="14"
+        HeightRequest="40"
+         />
+        </sf:SfTextInputLayout>
+                <Label x:Name="VehiculeModel_MarqueError" HorizontalTextAlignment="Start" 
+           TextColor="Red" IsVisible="False" Margin="10,-10,0,0" FontAttributes="Bold"/>
+                <sf:SfTextInputLayout   ContainerBackground="#fcf3e8" ContainerType="Filled" Hint="{loc:Translate Numerochassis}"  HeightRequest="80" WidthRequest="270" Margin="0,0,0,0" VerticalOptions="Center">
+            <Entry x:Name="numérodechassis"
+           
+            
+            
+         
+             Text="{Binding Vehicule.NumeroChassis, Mode=TwoWay}"
+             HeightRequest="5"
+             TextColor="Black"/>
+        </sf:SfTextInputLayout>
+                <Label x:Name="VehiculeModel_NumeroChassisError" HorizontalTextAlignment="Start" 
+           TextColor="Red" IsVisible="False" Margin="10,-10,0,0" FontAttributes="Bold"/>
+                <sf:SfTextInputLayout   ContainerBackground="#fcf3e8" ContainerType="Filled" Hint="{loc:Translate DateCirculation}" HeightRequest="80" WidthRequest="270" Padding="0" VerticalOptions="Center">
+            <DatePicker 
+x:Name="DateMiseEnCirculationPicker"
+Date="{Binding Vehicule.DateMiseEnCirculation, Mode=TwoWay}"
+Format="dd/MM/yyyy"
+                
+TextColor="Black"
+FontSize="14"
+BackgroundColor="Transparent"
+HorizontalOptions="FillAndExpand"
+VerticalOptions="Center" />
+        </sf:SfTextInputLayout>
+                <Label x:Name="VehiculeModel_DateMiseEnCirculationError" HorizontalTextAlignment="Start" 
+           TextColor="Red" IsVisible="False" Margin="10,-10,0,0" FontAttributes="Bold"/>
+                <sf:SfTextInputLayout   ContainerBackground="#fcf3e8" ContainerType="Filled" Hint="{loc:Translate Immatriculation}" HeightRequest="80" WidthRequest="270" Padding="0" VerticalOptions="Center">
+                    <Entry x:Name="Immatriculation"
+     
+    
+     Text="{Binding Vehicule.Immatriculation, Mode=TwoWay}"
+      HeightRequest="5"
+      TextColor="Black"/>
+                </sf:SfTextInputLayout>
+                <Label x:Name="VehiculeModel_ImmatriculationError" HorizontalTextAlignment="Start" 
+           TextColor="Red" IsVisible="False" Margin="10,-10,0,0" FontAttributes="Bold"/>
+
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="3">
+                    <Label
+ Text="{loc:Translate CarteGrise}" FontAttributes="Bold"
+ HorizontalOptions="Center"
+ VerticalOptions="Start"
+                TextColor="Black"/>
+                    <!--<ImageButton
+            Source="camera.png"
+            WidthRequest="30"
+            HeightRequest="30"
+            BackgroundColor="Transparent"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Command="{Binding PhotoCarteGriseCommand}" />-->   
+                <Image
+            Source="{Binding PhotoCarteGrisePreview}"
+            WidthRequest="130" Aspect="AspectFit"
+            HeightRequest="60"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+          >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PhotoCarteGriseCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                    <Label x:Name="VehiculeModel_PhotoCarteGriseError" HorizontalTextAlignment="Start" 
+           TextColor="Red" IsVisible="False" Margin="10,-10,0,0" FontAttributes="Bold"/>
+                    <!--phto2-->
+            <!--<Label
+ Text="Photo 2" FontAttributes="Bold"
+ HorizontalOptions="Center"
+ VerticalOptions="Start"
+                TextColor="Black"/>
+            <Image
+  Source="{Binding Photo2Preview}"
+  WidthRequest="130" Aspect="AspectFit"
+  HeightRequest="60"
+  HorizontalOptions="CenterAndExpand"
+  VerticalOptions="Center"
+>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Photo2Command}"/>
+                </Image.GestureRecognizers>
+            </Image>
+            --><!--phto3--><!--
+            <Label
+ Text="Photo 3" FontAttributes="Bold"
+ HorizontalOptions="Center"
+ VerticalOptions="Start"
+                TextColor="Black"/>
+                    <Image
+  Source="{Binding Photo3Preview}"
+  WidthRequest="270" Aspect="AspectFit"
+  HeightRequest="60"
+  HorizontalOptions="CenterAndExpand"
+  VerticalOptions="Center"
+>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Photo3Command}"/>
+                        </Image.GestureRecognizers>
+                    </Image>-->
+                </VerticalStackLayout>
+
+                <Button  Text="{loc:Translate AjoutVéhicule}"  FontAttributes="Bold"
+        BackgroundColor="#cd7100"
+        WidthRequest="220"
+        HeightRequest="40"
+        Margin="0,13,0,0"
+        Command="{Binding CreateVehiculeCommand}" CommandParameter="{x:Reference Name=VehiculePopup}"  TextColor="White" />
+
+                <!--<Button  Text="{loc:Translate Annuler}"  FontAttributes="Bold" TextColor="White" BackgroundColor="#cd7100"
+ WidthRequest="220"
+ HeightRequest="40"
+ Margin="0,0,0,0" Clicked="ClosePopup_Clicked" />-->
+        
+    </VerticalStackLayout>
+        </ScrollView>
+    </Border>
+</mopups:PopupPage>

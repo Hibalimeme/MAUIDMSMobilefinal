@@ -1,0 +1,139 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIDMSMobile.Mvvm.Views.LoginPage"
+             xmlns:vm="clr-namespace:MAUIDMSMobile.Mvvm.ViewModels"
+             NavigationPage.HasNavigationBar="False"
+            xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+             xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+             
+             BackgroundColor="White">
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="logob2m.png" />
+    </ContentPage.ToolbarItems>-->
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#ffe5c3" Offset="0.0" />
+            <GradientStop Color="#f9c27b" Offset="0.6" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
+
+        <VerticalStackLayout Padding="20" Spacing="5">
+      
+            <Image Source="logoapplication.png"
+       HorizontalOptions="Center"
+       Margin="0,9,0,1"
+       WidthRequest="180"
+       HeightRequest="180"
+               />
+
+            <Label Text="{loc:Translate Connecter}" FontFamily="Times New Roman" 
+               TextColor="#eb8126" FontSize="30" Margin="75,-16,0,0" FontAttributes="Bold" />
+
+            <ActivityIndicator
+             
+x:Name="activityIndicator"
+IsEnabled="{Binding IsBusy}"
+IsRunning="{Binding IsBusy}"
+IsVisible="{Binding IsBusy}" />
+
+            <sf:SfTextInputLayout   ContainerBackground="#fcf3e8" ContainerType="Filled"  Hint="{loc:Translate EmailInput}"  HeightRequest="80" WidthRequest="270" Margin="0,13,0,0" >
+                <Entry Text="{Binding Userlogin.email,Mode=TwoWay}" TextColor="Black" MaxLength="30" />
+            </sf:SfTextInputLayout>
+            <Label x:Name="UtilisateurLogin_emailError"  TextColor="Red" IsVisible="False" Margin="30,-10,0,0" FontAttributes="Bold"/>
+            <sf:SfTextInputLayout ContainerBackground="#fcf3e8"  ContainerType="Filled" Hint="{loc:Translate Mp}" HeightRequest="80" WidthRequest="270"  Margin="0,-5,0,0" >
+                <Entry  Text="{Binding Userlogin.password,Mode=TwoWay}"  TextColor="Black"  MaxLength="30" />
+            </sf:SfTextInputLayout>
+            <Label x:Name="UtilisateurLogin_passwordError" TextColor="Red" IsVisible="False"  Margin="30,-15,0,0" FontAttributes="Bold"/>
+            <VerticalStackLayout>
+                <Label TextDecorations="Underline" Text="{loc:Translate MpOublie}" FontAttributes="Bold"
+ Grid.Column="1" FontSize="13"
+VerticalOptions="Center" Margin="110,-4,10,0"  TextColor="#cd7100">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnForgotPasswordTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <HorizontalStackLayout >
+                    <CheckBox 
+x:Name=" checkbox " 
+Color="White" 
+Margin="80,0,0,0" 
+
+IsChecked="{Binding Userlogin.Checkkeepsessionopen}" />
+                    <Label Text="{loc:Translate Session}" FontSize="13"  TextColor="#cd7100"
+           VerticalTextAlignment="Center" FontAttributes="Bold"
+          Margin="-6,0,0,0" />
+                </HorizontalStackLayout>
+                
+            </VerticalStackLayout>
+            <!--<Grid ColumnDefinitions="Auto, Auto" HorizontalOptions="Center" ColumnSpacing="27">
+               
+
+                <StackLayout Orientation="Horizontal" Grid.Column="0" VerticalOptions="Center">
+                    
+                </StackLayout>
+            </Grid>-->
+            <Button Text="{loc:Translate log}"   BackgroundColor="#cd7100" TextColor="White"  FontAttributes="Bold" WidthRequest="200" HeightRequest="40" 
+        Margin="0,13,0,0" FontSize="19"
+        Command="{Binding AuthenticateMobileUserCommand}" />
+            <!--<Button Text="{loc:Translate Connecter}"   BackgroundColor="#cd7100" TextColor="White"  FontAttributes="Bold" WidthRequest="220" HeightRequest="40" 
+Margin="0,13,0,0"
+Command="{Binding AuthenticateMobileUserCommand}" />-->
+
+
+            <Label 
+    Text="{Binding LoginResult}" 
+    TextColor="Red" 
+    VerticalOptions="CenterAndExpand" 
+    HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="{loc:Translate PasCompte}" 
+           VerticalTextAlignment="Center" 
+           HorizontalTextAlignment="Center"
+           TextColor="Black"
+        />
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+            <BoxView BackgroundColor="White" HeightRequest="1" Margin="5,13,5,0" WidthRequest="60" VerticalOptions="Center" />
+
+                <Label Text="{loc:Translate CreerCompte}" FontAttributes="Bold" TextDecorations="Underline"
+       HorizontalTextAlignment="Center" 
+       VerticalOptions="Center" FontSize="16" Margin="5,10,5,0" TextColor="#cd7100">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnCreateAccountTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <BoxView BackgroundColor="White" HeightRequest="1"  Margin="5,13,5,0" WidthRequest="60" VerticalOptions="Center" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <BoxView BackgroundColor="White" HeightRequest="1" Margin="5,13,5,0" WidthRequest="60" VerticalOptions="Center" />
+
+                <Label Text="{loc:Translate Langue}" FontAttributes="Bold" TextDecorations="Underline"
+HorizontalTextAlignment="Center"
+VerticalOptions="Center" FontSize="16" Margin="5,10,5,0" TextColor="#cd7100">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnlangueTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <BoxView BackgroundColor="White" HeightRequest="1"  Margin="5,13,5,0" WidthRequest="60" VerticalOptions="Center" />
+
+
+                <!--<Label Text="HOME" TextDecorations="Underline"
+           
+HorizontalTextAlignment="Center" Style="{StaticResource LinkLabelStyle}"
+VerticalOptions="Center" FontSize="16" Margin="5,10,5,0" TextColor="#cd7100">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="HOME" />
+                    </Label.GestureRecognizers>
+                </Label>-->
+            </StackLayout>
+           
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

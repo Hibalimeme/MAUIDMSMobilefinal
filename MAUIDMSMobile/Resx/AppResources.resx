@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accepter" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="AddressRequis" xml:space="preserve">
+    <value>L'adresse est requise</value>
+  </data>
+  <data name="Adresse" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="AjoutVéhicule" xml:space="preserve">
+    <value>Ajout véhicule</value>
+  </data>
+  <data name="Anglais" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="Annuler" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="Arab" xml:space="preserve">
+    <value>Arabe</value>
+  </data>
+  <data name="AttenteValidation" xml:space="preserve">
+    <value>En Attente de Validation</value>
+  </data>
+  <data name="AvoirCompte" xml:space="preserve">
+    <value>Vous avez de compte ?</value>
+  </data>
+  <data name="Bienvenue" xml:space="preserve">
+    <value>Bienvenue !</value>
+  </data>
+  <data name="CarteGrise" xml:space="preserve">
+    <value>Photo Carte Grise*</value>
+  </data>
+  <data name="Centres__" xml:space="preserve">
+    <value>Centres de service</value>
+  </data>
+  <data name="Centre__" xml:space="preserve">
+    <value>centre:</value>
+  </data>
+  <data name="Codecentre__" xml:space="preserve">
+    <value>Code du centre:</value>
+  </data>
+  <data name="Codepackentretien__" xml:space="preserve">
+    <value>Code du pack d'entretien:</value>
+  </data>
+  <data name="CodePostal" xml:space="preserve">
+    <value>Code Postal</value>
+  </data>
+  <data name="CodePostalRequis" xml:space="preserve">
+    <value>Le code postal est requis</value>
+  </data>
+  <data name="Connecter" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
+  <data name="CreationCompte" xml:space="preserve">
+    <value>Création de compte</value>
+  </data>
+  <data name="CreationVehicule" xml:space="preserve">
+    <value>Créer une véhicule</value>
+  </data>
+  <data name="CreerCompte" xml:space="preserve">
+    <value>Créer un compte</value>
+  </data>
+  <data name="Creneau" xml:space="preserve">
+    <value>Créneau</value>
+  </data>
+  <data name="Creneauxd" xml:space="preserve">
+    <value>Créneaux disponibles</value>
+  </data>
+  <data name="Creneauxsel" xml:space="preserve">
+    <value>Créneaux sélectionnés:</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="DateCirculation" xml:space="preserve">
+    <value>Date de mise en circulation *</value>
+  </data>
+  <data name="DateCirculation__" xml:space="preserve">
+    <value>Date de mise en circulation :</value>
+  </data>
+  <data name="DateHeure__" xml:space="preserve">
+    <value>Date et heure:</value>
+  </data>
+  <data name="Dateplanifie__" xml:space="preserve">
+    <value>Date planifiée:</value>
+  </data>
+  <data name="Deconnecter" xml:space="preserve">
+    <value>Se deconnecter</value>
+  </data>
+  <data name="DeconnecterPoPUp" xml:space="preserve">
+    <value>Voulez-vous vous déconnecter ?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="detaildevis" xml:space="preserve">
+    <value>Les détails du devis</value>
+  </data>
+  <data name="Devis" xml:space="preserve">
+    <value>Mes Devis</value>
+  </data>
+  <data name="Dure__" xml:space="preserve">
+    <value>Durée (min):</value>
+  </data>
+  <data name="EchecConexion" xml:space="preserve">
+    <value>Échec de connexion</value>
+  </data>
+  <data name="EmailInput" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailRequis" xml:space="preserve">
+    <value>L'adresse e-mail est requise</value>
+  </data>
+  <data name="Email_" xml:space="preserve">
+    <value>Email :</value>
+  </data>
+  <data name="Ensavoirplus" xml:space="preserve">
+    <value>En savoir plus</value>
+  </data>
+  <data name="EreurAttendValidation" xml:space="preserve">
+    <value>Error: Votre compte est en attente de validation</value>
+  </data>
+  <data name="EreurCompteBlock" xml:space="preserve">
+    <value>Error: Votre compte est bloqué</value>
+  </data>
+  <data name="EreurCompteBlockeOuAttent" xml:space="preserve">
+    <value>Error: Compte bloqué ou en attente de validation</value>
+  </data>
+  <data name="EreurDateInvalide" xml:space="preserve">
+    <value>Erreur : Date de première immatriculation invalide.</value>
+  </data>
+  <data name="EreurDejaexist" xml:space="preserve">
+    <value>Error: utilisateur existe déjà</value>
+  </data>
+  <data name="EreurEnvoieEmail" xml:space="preserve">
+    <value>Error: Erreur lors de l’envoi de l’email</value>
+  </data>
+  <data name="EreurGenre" xml:space="preserve">
+    <value>Error: Genre invalide</value>
+  </data>
+  <data name="EreurImatriculationinvalide" xml:space="preserve">
+    <value>Erreur : Numéro d'immatriculation invalide.</value>
+  </data>
+  <data name="EreurInconnu" xml:space="preserve">
+    <value>Error: inconnu</value>
+  </data>
+  <data name="EreurMarqueInconnu" xml:space="preserve">
+    <value>Erreur : Marque inconnue.</value>
+  </data>
+  <data name="EreurModelInconnu" xml:space="preserve">
+    <value>Erreur : Modèle inconnu.</value>
+  </data>
+  <data name="EreurMpIncorect" xml:space="preserve">
+    <value>Error: Mot de passe incorrect</value>
+  </data>
+  <data name="EreurNumChasiinvalide" xml:space="preserve">
+    <value>Erreur : Numéro de châssis invalide.</value>
+  </data>
+  <data name="EreurNumChassiexiste" xml:space="preserve">
+    <value>Erreur : Numéro de châssis déjà enregistré.</value>
+  </data>
+  <data name="Ereurobilgatoire" xml:space="preserve">
+    <value>Error: Champs obligatoires manquants</value>
+  </data>
+  <data name="EreurPhoto" xml:space="preserve">
+    <value>Erreur : Photo de la carte d'immatriculation invalide.</value>
+  </data>
+  <data name="Ereurservenue" xml:space="preserve">
+    <value>Une erreur est survenue :</value>
+  </data>
+  <data name="EreurUserInvalide" xml:space="preserve">
+    <value>Erreur : Utilisateur mobile invalide.</value>
+  </data>
+  <data name="EreurUserNonTrouvé" xml:space="preserve">
+    <value>Error: Utilisateur introuvable</value>
+  </data>
+  <data name="ErreurAllert" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="Francais" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="GenderRequis" xml:space="preserve">
+    <value>Le genre est requis</value>
+  </data>
+  <data name="Genre" xml:space="preserve">
+    <value>Genre</value>
+  </data>
+  <data name="Heureplanifie__" xml:space="preserve">
+    <value>Heure planifiée:</value>
+  </data>
+  <data name="Historique" xml:space="preserve">
+    <value>Historique</value>
+  </data>
+  <data name="HistoriquePage" xml:space="preserve">
+    <value>Page de l’historique</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Page d'accueil</value>
+  </data>
+  <data name="IdentifiantRequis" xml:space="preserve">
+    <value>L'identifiant est requis</value>
+  </data>
+  <data name="Immatriculation" xml:space="preserve">
+    <value>Immatriculation *</value>
+  </data>
+  <data name="Immatriculation__" xml:space="preserve">
+    <value>Immatriculation:</value>
+  </data>
+  <data name="Inscrire" xml:space="preserve">
+    <value>S'inscrire</value>
+  </data>
+  <data name="k" xml:space="preserve">
+    <value>Valeur</value>
+  </data>
+  <data name="Kilométrage" xml:space="preserve">
+    <value>Kilométrage:</value>
+  </data>
+  <data name="LanguageRequis" xml:space="preserve">
+    <value>La langue est requise</value>
+  </data>
+  <data name="Langue" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="Marque" xml:space="preserve">
+    <value>Marque *</value>
+  </data>
+  <data name="Marque__" xml:space="preserve">
+    <value>Marque:</value>
+  </data>
+  <data name="MenuVehicule" xml:space="preserve">
+    <value>Mes véhicules</value>
+  </data>
+  <data name="MesRendezVousPage" xml:space="preserve">
+    <value>Page des rendez-vous</value>
+  </data>
+  <data name="Mesvehicule" xml:space="preserve">
+    <value>Page des véhicules</value>
+  </data>
+  <data name="MiseAjourOk" xml:space="preserve">
+    <value>Mise à jour réussie</value>
+  </data>
+  <data name="MiseCompte" xml:space="preserve">
+    <value>Mise a jour de compte</value>
+  </data>
+  <data name="MiseJour" xml:space="preserve">
+    <value>mise a jour</value>
+  </data>
+  <data name="Modele" xml:space="preserve">
+    <value>Modèle *</value>
+  </data>
+  <data name="Modle__" xml:space="preserve">
+    <value>Modèle:</value>
+  </data>
+  <data name="MonCompte" xml:space="preserve">
+    <value>Mon compte</value>
+  </data>
+  <data name="Montant" xml:space="preserve">
+    <value>Montant:</value>
+  </data>
+  <data name="Mp" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="MpOublie" xml:space="preserve">
+    <value>Mot de passe oublié?</value>
+  </data>
+  <data name="MpRequis" xml:space="preserve">
+    <value>Le mot de passe est requis</value>
+  </data>
+  <data name="ndevis__" xml:space="preserve">
+    <value>Numéro Devis:</value>
+  </data>
+  <data name="Nom" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="Nomcentre__" xml:space="preserve">
+    <value>Nom du centre:</value>
+  </data>
+  <data name="NomRequis" xml:space="preserve">
+    <value>Le nom est requis</value>
+  </data>
+  <data name="Non" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="Numchass__" xml:space="preserve">
+    <value>NuméroChâssis:</value>
+  </data>
+  <data name="Numerochassis" xml:space="preserve">
+    <value>Numéro de Châssis *</value>
+  </data>
+  <data name="numWhatsApp" xml:space="preserve">
+    <value>Le numéro WhatsApp est requis</value>
+  </data>
+  <data name="Numrocrneau__" xml:space="preserve">
+    <value>Numéro du créneau:</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Oui" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="PackEntretien__" xml:space="preserve">
+    <value>Pack d'entretien:</value>
+  </data>
+  <data name="Packsmaintenance__" xml:space="preserve">
+    <value>Packs de maintenance:</value>
+  </data>
+  <data name="pageCreationCompte" xml:space="preserve">
+    <value>Page de création de compte</value>
+  </data>
+  <data name="pagedevis" xml:space="preserve">
+    <value>Page de devis</value>
+  </data>
+  <data name="PasCompte" xml:space="preserve">
+    <value>Vous n'avez pas de compte ?</value>
+  </data>
+  <data name="PasConexion" xml:space="preserve">
+    <value>Pas de connexion internet. Veuillez vérifier votre connexion et réessayer.</value>
+  </data>
+  <data name="Pays" xml:space="preserve">
+    <value>Pays</value>
+  </data>
+  <data name="PaysRequis" xml:space="preserve">
+    <value>Le pays est requis</value>
+  </data>
+  <data name="Photo2" xml:space="preserve">
+    <value>Photo 2</value>
+  </data>
+  <data name="Photo3" xml:space="preserve">
+    <value>Photo 3</value>
+  </data>
+  <data name="Prenom" xml:space="preserve">
+    <value>Prénom</value>
+  </data>
+  <data name="PrenomRequis" xml:space="preserve">
+    <value>Le prénom est requis</value>
+  </data>
+  <data name="Refuser" xml:space="preserve">
+    <value>Refuser</value>
+  </data>
+  <data name="RendezVous" xml:space="preserve">
+    <value>Mes rendez-vous</value>
+  </data>
+  <data name="RenitialisationOk" xml:space="preserve">
+    <value>Réinitialisation réussie</value>
+  </data>
+  <data name="Renitialise" xml:space="preserve">
+    <value>Rénitialiser</value>
+  </data>
+  <data name="Réinitialiser" xml:space="preserve">
+    <value>Réinitialiser le mot de passe</value>
+  </data>
+  <data name="Rserver" xml:space="preserve">
+    <value>Réserver</value>
+  </data>
+  <data name="Rserverrdv" xml:space="preserve">
+    <value>Réserver un rendez-vous</value>
+  </data>
+  <data name="s" xml:space="preserve">
+    <value />
+  </data>
+  <data name="scentre" xml:space="preserve">
+    <value>Sélectionner un centre de service</value>
+  </data>
+  <data name="screnaux" xml:space="preserve">
+    <value>Sélectionner les créneaux disponibles</value>
+  </data>
+  <data name="Session" xml:space="preserve">
+    <value>Rester connecté</value>
+  </data>
+  <data name="sKilomtrage" xml:space="preserve">
+    <value>Saisir kilométrage</value>
+  </data>
+  <data name="Slogan" xml:space="preserve">
+    <value>Votre route, en toute sérénité.</value>
+  </data>
+  <data name="Statut__" xml:space="preserve">
+    <value>Statut:</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>using System.Globalization;</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>using LocalizationResourceManager.Maui; // ✅ Le bon package de JorgeFraga</value>
+  </data>
+  <data name="String10" xml:space="preserve">
+    <value>}</value>
+  </data>
+  <data name="String11" xml:space="preserve">
+    <value>catch (Exception ex)</value>
+  </data>
+  <data name="String12" xml:space="preserve">
+    <value>{</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>throw ex;</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>}</value>
+  </data>
+  <data name="String15" xml:space="preserve">
+    <value>}</value>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>public static void SetAppLanguage(string lang, ILocalizationResourceManager localizationResourceManager)</value>
+  </data>
+  <data name="String17" xml:space="preserve">
+    <value>{</value>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>try</value>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value>{</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>public static class StaticMultiLang</value>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>switch (lang)</value>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>{</value>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>case "fr":</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>case "FR":</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>localizationResourceManager.CurrentCulture = new CultureInfo("fr");</value>
+  </data>
+  <data name="String25" xml:space="preserve">
+    <value>SetMLFlowDirection(FlowDirection.LeftToRight);</value>
+  </data>
+  <data name="String26" xml:space="preserve">
+    <value>//SetMLTextAlign(TextAlignment.Start);</value>
+  </data>
+  <data name="String27" xml:space="preserve">
+    <value>//SetMLHorizontalTextAlign(TextAlignment.Start);</value>
+  </data>
+  <data name="String28" xml:space="preserve">
+    <value>//SetHorizontalOption(LayoutOptions.Start, LayoutOptions.StartAndExpand);</value>
+  </data>
+  <data name="String29" xml:space="preserve">
+    <value>//SetMLAllPickersImageAlign(ImageAlignment.Right);</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>{</value>
+  </data>
+  <data name="String30" xml:space="preserve">
+    <value>break;</value>
+  </data>
+  <data name="String31" xml:space="preserve">
+    <value>case "en":</value>
+  </data>
+  <data name="String32" xml:space="preserve">
+    <value>case "EN":</value>
+  </data>
+  <data name="String33" xml:space="preserve">
+    <value>localizationResourceManager.CurrentCulture = new CultureInfo("en");</value>
+  </data>
+  <data name="String34" xml:space="preserve">
+    <value>SetMLFlowDirection(FlowDirection.LeftToRight);</value>
+  </data>
+  <data name="String35" xml:space="preserve">
+    <value>//SetMLTextAlign(TextAlignment.Start);</value>
+  </data>
+  <data name="String36" xml:space="preserve">
+    <value>//SetMLHorizontalTextAlign(TextAlignment.Start);</value>
+  </data>
+  <data name="String37" xml:space="preserve">
+    <value>//SetHorizontalOption(LayoutOptions.Start, LayoutOptions.StartAndExpand);</value>
+  </data>
+  <data name="String38" xml:space="preserve">
+    <value>//SetMLAllPickersImageAlign(ImageAlignment.Right);</value>
+  </data>
+  <data name="String39" xml:space="preserve">
+    <value>break;</value>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>public static FlowDirection MLFlowDirection = FlowDirection.LeftToRight;</value>
+  </data>
+  <data name="String40" xml:space="preserve">
+    <value>case "ar":</value>
+  </data>
+  <data name="String41" xml:space="preserve">
+    <value>case "AR":</value>
+  </data>
+  <data name="String42" xml:space="preserve">
+    <value>localizationResourceManager.CurrentCulture = new CultureInfo("ar");</value>
+  </data>
+  <data name="String43" xml:space="preserve">
+    <value>SetMLFlowDirection(FlowDirection.RightToLeft);</value>
+  </data>
+  <data name="String44" xml:space="preserve">
+    <value>//SetMLTextAlign(TextAlignment.End);</value>
+  </data>
+  <data name="String45" xml:space="preserve">
+    <value>//SetMLHorizontalTextAlign(TextAlignment.Start);</value>
+  </data>
+  <data name="String46" xml:space="preserve">
+    <value>//SetHorizontalOption(LayoutOptions.End, LayoutOptions.EndAndExpand);</value>
+  </data>
+  <data name="String47" xml:space="preserve">
+    <value>//SetMLAllPickersImageAlign(ImageAlignment.Left);</value>
+  </data>
+  <data name="String48" xml:space="preserve">
+    <value>break;</value>
+  </data>
+  <data name="String49" xml:space="preserve">
+    <value>default: //français</value>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>private static void SetMLFlowDirection(FlowDirection flowDirection)</value>
+  </data>
+  <data name="String50" xml:space="preserve">
+    <value>localizationResourceManager.CurrentCulture = new CultureInfo("fr");</value>
+  </data>
+  <data name="String51" xml:space="preserve">
+    <value>SetMLFlowDirection(FlowDirection.LeftToRight);</value>
+  </data>
+  <data name="String52" xml:space="preserve">
+    <value>//SetMLTextAlign(TextAlignment.Start);</value>
+  </data>
+  <data name="String53" xml:space="preserve">
+    <value>//SetMLHorizontalTextAlign(TextAlignment.Start);</value>
+  </data>
+  <data name="String54" xml:space="preserve">
+    <value>//SetHorizontalOption(LayoutOptions.Start, LayoutOptions.StartAndExpand);</value>
+  </data>
+  <data name="String55" xml:space="preserve">
+    <value>//SetMLAllPickersImageAlign(ImageAlignment.Right);</value>
+  </data>
+  <data name="String56" xml:space="preserve">
+    <value>break;</value>
+  </data>
+  <data name="String57" xml:space="preserve">
+    <value>}</value>
+  </data>
+  <data name="String58" xml:space="preserve">
+    <value>}</value>
+  </data>
+  <data name="String59" xml:space="preserve">
+    <value>catch (Exception ex)</value>
+  </data>
+  <data name="String6" xml:space="preserve">
+    <value>{</value>
+  </data>
+  <data name="String60" xml:space="preserve">
+    <value>{</value>
+  </data>
+  <data name="String61" xml:space="preserve">
+    <value>throw ex;</value>
+  </data>
+  <data name="String62" xml:space="preserve">
+    <value>}</value>
+  </data>
+  <data name="String63" xml:space="preserve">
+    <value>}</value>
+  </data>
+  <data name="String64" xml:space="preserve">
+    <value>}</value>
+  </data>
+  <data name="String7" xml:space="preserve">
+    <value>try</value>
+  </data>
+  <data name="String8" xml:space="preserve">
+    <value>{</value>
+  </data>
+  <data name="String9" xml:space="preserve">
+    <value>MLFlowDirection = flowDirection;</value>
+  </data>
+  <data name="Succes" xml:space="preserve">
+    <value>Succès</value>
+  </data>
+  <data name="svehicule" xml:space="preserve">
+    <value>Sélectionner un véhicule</value>
+  </data>
+  <data name="Updateok" xml:space="preserve">
+    <value>Mise à jour réussi</value>
+  </data>
+  <data name="Valider" xml:space="preserve">
+    <value>Valider</value>
+  </data>
+  <data name="VehiculeCreeSucces" xml:space="preserve">
+    <value>Véhicule créé avec succès</value>
+  </data>
+  <data name="Ville" xml:space="preserve">
+    <value>Ville</value>
+  </data>
+  <data name="VilleRequis" xml:space="preserve">
+    <value>La ville est requise</value>
+  </data>
+  <data name="VéhiculesValidés" xml:space="preserve">
+    <value>Véhicules Validés</value>
+  </data>
+  <data name="WhatsApp" xml:space="preserve">
+    <value>Numéro WhatsApp</value>
+  </data>
+  <data name="Kilometrage__" xml:space="preserve">
+    <value>Kilométrage</value>
+  </data>
+  <data name="comptesucces" xml:space="preserve">
+    <value>Le compte a été créé avec succès</value>
+  </data>
+  <data name="ereurcartegrise" xml:space="preserve">
+    <value>La photo de la carte grise est requise</value>
+  </data>
+  <data name="ereurdateimmatriculation" xml:space="preserve">
+    <value>La date de mise en circulation est requise</value>
+  </data>
+  <data name="ereurimtriculation" xml:space="preserve">
+    <value>L'immatriculation est obligatoire.</value>
+  </data>
+  <data name="ereurmarque" xml:space="preserve">
+    <value>La marque est requise</value>
+  </data>
+  <data name="ereurmodel" xml:space="preserve">
+    <value>Le modèle est requis</value>
+  </data>
+  <data name="ereurnchassis" xml:space="preserve">
+    <value>Le numéro de châssis est requis</value>
+  </data>
+  <data name="messageok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="devisaccpte" xml:space="preserve">
+    <value>Le devis a été accepté</value>
+  </data>
+  <data name="devisrefus" xml:space="preserve">
+    <value>Le devis a été refusé</value>
+  </data>
+  <data name="crenauxinf" xml:space="preserve">
+    <value>Les créneaux sélectionnés ne sont pas consécutifs ou insuffisants</value>
+  </data>
+  <data name="crenauxpasvalide" xml:space="preserve">
+    <value>Les créneaux ou pack ne sont pas valides</value>
+  </data>
+  <data name="rdzechoue" xml:space="preserve">
+    <value>La prise de rendez-vous a échoué</value>
+  </data>
+  <data name="spack" xml:space="preserve">
+    <value>Sélectionnez un pack d'entretien</value>
+  </data>
+  <data name="bookedok" xml:space="preserve">
+    <value>Rendez-vous pris avec succès</value>
+  </data>
+  <data name="hrendezvous" xml:space="preserve">
+    <value>Historique des rendez-vous</value>
+  </data>
+  <data name="doitremplir" xml:space="preserve">
+    <value>Veuillez remplir tous les champs</value>
+  </data>
+  <data name="log" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
+  <data name="packinsufisant" xml:space="preserve">
+    <value>Les créneaux sélectionnés ne sont pas consécutifs ou doivent exactement couvrir la durée du pack.</value>
+  </data>
+</root>

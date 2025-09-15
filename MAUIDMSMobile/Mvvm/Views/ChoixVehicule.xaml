@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    x:Class="MAUIDMSMobile.Mvvm.Views.ChoixVehicule"
+    xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+    x:Name="VehiculelstView"
+    xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+                 xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+     NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#80000000">
+
+    <Border Stroke="Transparent"
+            StrokeShape="RoundRectangle 25"
+            BackgroundColor="#fee4c4"
+            Margin="10"
+          HeightRequest="300"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+        <VerticalStackLayout>
+            <ImageButton 
+    Source="x.png"
+    WidthRequest="4"
+    HeightRequest="3"
+
+    Clicked="ClosePopup_Clicked"
+    BackgroundColor="Transparent"
+    BorderColor="Transparent"
+/>
+            <Label Text="{loc:Translate VéhiculesValidés}"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   TextColor="#eb8126"
+                   HorizontalOptions="Center"
+                   Margin="0"/>
+
+            <CollectionView ItemsSource="{Binding VehiculesValides}" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border StrokeShape="RoundRectangle 15,15,15,15"
+                    BackgroundColor="#ffe1bc"
+                    Stroke="#954500" 
+Margin="5,5,5,0"
+                    StrokeThickness="1"
+                    VerticalOptions="FillAndExpand">
+                            <VerticalStackLayout>
+                                <Label Margin="10,0,0,0"
+HorizontalOptions="StartAndExpand"
+VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{loc:Translate Marque__}" TextColor="#954500" FontAttributes="Bold"/>
+                                            <Span Text="{Binding Marque}" TextColor="#954500" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label Margin="10,0,0,0"
+HorizontalOptions="StartAndExpand"
+VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{loc:Translate Modle__}" TextColor="#954500" FontAttributes="Bold"/>
+                                            <Span Text="{Binding Model}" TextColor="#954500" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label Margin="10,0,0,0"
+HorizontalOptions="StartAndExpand"
+VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{loc:Translate Numchass__}" TextColor="#954500" FontAttributes="Bold"/>
+                                            <Span Text="{Binding NumChassis}" TextColor="#954500" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label Margin="10,0,0,0"
+HorizontalOptions="StartAndExpand"
+VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{loc:Translate DateHeure__}" TextColor="#954500" FontAttributes="Bold"/>
+                                            <Span Text="{Binding DateMiseEnCirculation, StringFormat='{0:d}'}" TextColor="#954500" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label Margin="10,0,0,0"
+HorizontalOptions="StartAndExpand"
+VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{loc:Translate Immatriculation__}" TextColor="#954500" FontAttributes="Bold"/>
+                                            <Span Text="{Binding Immatriculation}" TextColor="#954500" FontAttributes="Bold"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <VerticalStackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference VehiculelstView}, Path=BindingContext.VehiculeSelectedCommand}" CommandParameter="{Binding .}"/>
+                                </VerticalStackLayout.GestureRecognizers>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+
+    </Border>
+</mopups:PopupPage>

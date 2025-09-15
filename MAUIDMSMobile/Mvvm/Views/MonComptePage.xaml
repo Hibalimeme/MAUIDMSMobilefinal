@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIDMSMobile.Mvvm.Views.MonComptePage"
+                         xmlns:vm="clr-namespace:MAUIDMSMobile.Mvvm.ViewModels"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+BackgroundColor="White"
+              xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+             xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+             NavigationPage.HasNavigationBar="False"
+             Title="{loc:Translate MonCompte}">
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="logob2m.png" />
+    </ContentPage.ToolbarItems>-->
+    <ScrollView>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <BoxView Grid.Row="0" HeightRequest="57" VerticalOptions="Start">
+                <BoxView.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#f2c08f" Offset="0.1" />
+                        <GradientStop Color="#ecb073" Offset="0.7" />
+                    </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>
+           
+                <Label Grid.Row="0"
+           Text="{loc:Translate MonCompte}"
+            FontFamily="Times New Roman"
+            FontSize="25"
+            TextColor="#df761c"
+             FontAttributes="Bold"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+            
+            <BoxView Grid.Row="1" BackgroundColor="#eb8126" HeightRequest="2" HorizontalOptions="Fill" />
+
+            <VerticalStackLayout Grid.Row="2" Padding="10">
+                <VerticalStackLayout.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,2">
+                        <GradientStop Color="#f3d0a4" Offset="0.1" />
+                        <GradientStop Color="#efa878" Offset="0.9" />
+                    </LinearGradientBrush>
+                </VerticalStackLayout.Background>
+
+                <Button Text="{loc:Translate MiseJour}"
+   BackgroundColor="#cd7100"
+   TextColor="White"
+   WidthRequest="160" 
+   Clicked="OnUPDATETapped"
+                  FontAttributes="Bold" 
+                        Margin="0,30,0,0"/>
+                
+                
+
+                <Button Text="{loc:Translate Deconnecter}"
+         BackgroundColor="#cd7100"
+         TextColor="White"
+         WidthRequest="160"
+         Clicked="OndeconnectePressed"
+                        FontAttributes="Bold" 
+                        Margin="0,30,0,0"/>
+
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIDMSMobile.Mvvm.Views.HistoriquePage"
+             xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+             xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+             NavigationPage.HasNavigationBar="False"
+             Title="{loc:Translate HistoriquePage}"
+             BackgroundColor="White">
+    <ScrollView>
+        <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <BoxView Grid.Row="0" HeightRequest="57" VerticalOptions="Start">
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#f2c08f" Offset="0.1" />
+                    <GradientStop Color="#ecb073" Offset="0.7" />
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+            <Label Text="{loc:Translate hrendezvous}"
+                   FontFamily="Times New Roman"
+                   FontSize="25"
+                   TextColor="#df761c"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Margin="0,5,0,10"/>
+        
+
+        <!-- Divider -->
+        <BoxView Grid.Row="1" BackgroundColor="#eb8126" HeightRequest="2" HorizontalOptions="Fill" />
+
+        <!-- Main Content -->
+        <VerticalStackLayout Grid.Row="2" Padding="10">
+            <VerticalStackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#ffdbad" Offset="0.0" />
+                    <GradientStop Color="#f9c27b" Offset="0.6" />
+                </LinearGradientBrush>
+            </VerticalStackLayout.Background>
+            
+                <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Center" />
+
+                <CollectionView ItemsSource="{Binding RendezvousHistoriqueService}" SelectionMode="Single">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                        <Frame BackgroundColor="#ffe1bc" BorderColor="#954500" CornerRadius="15" Margin="10">
+
+                                <VerticalStackLayout Padding="0">
+                                    <Label  TextColor="#954500" FontAttributes="Bold">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                            <Span Text="{loc:Translate Numrocrneau__}" TextColor="#954500" FontAttributes="Bold" />
+                                            <Span Text="{Binding NumeroCreneau}" TextColor="#954500" FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                    <Label  TextColor="#954500" FontAttributes="Bold">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                            <Span Text="{loc:Translate Dateplanifie__}" TextColor="#954500" FontAttributes="Bold"/>
+                                            <Span Text="{Binding DatePlanifiee}" TextColor="#954500" FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                    <Label  TextColor="#954500" FontAttributes="Bold">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                            <Span Text="{loc:Translate Heureplanifie__}" TextColor="#954500" FontAttributes="Bold"/>
+                                            <Span Text="{Binding HeurePlanifiee}" TextColor="#954500" FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                    <Label  TextColor="#954500" FontAttributes="Bold">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                            <Span Text="{loc:Translate Codecentre__}" TextColor="#954500" FontAttributes="Bold"/>
+                                            <Span Text="{Binding CodeCentreResponsable}" TextColor="#954500" FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                    <Label  TextColor="#954500" FontAttributes="Bold">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                            <Span Text="{loc:Translate Statut__}" TextColor="#954500" FontAttributes="Bold"/>
+                                            <Span Text="{Binding Statut}" TextColor="#954500" FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+          
+        </VerticalStackLayout>
+    </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIDMSMobile.Mvvm.Views.Motdepasseoublié"
+                              xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+
+
+             Title="{loc:Translate Réinitialiser}">
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="logob2m.png" />
+    </ContentPage.ToolbarItems>-->
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#ffe5c3" Offset="0.0" />
+            <GradientStop Color="#f9c27b" Offset="0.6" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <VerticalStackLayout>
+        <Label Text="{loc:Translate Réinitialiser}" FontFamily="Times New Roman" FontSize="25"
+    Style="{StaticResource TitleLabelStyle}" FontAttributes="Bold"  TextColor="#eb8126" Margin="5,180,0,40" />
+
+
+        <ActivityIndicator
+              
+x:Name="activityIndicator"
+IsEnabled="{Binding IsBusy}"
+IsRunning="{Binding IsBusy}"
+IsVisible="{Binding IsBusy}" />
+
+        <sf:SfTextInputLayout   ContainerType="Filled" Hint="{loc:Translate EmailInput}" HeightRequest="80" WidthRequest="270" Margin="0,-4,0,0" >
+
+            <Entry x:Name="email"
+                  
+                   Keyboard="Email"
+                    
+              
+                    Text="{Binding Usermotdepasseoublié.email}"
+                    HeightRequest="5"
+                    TextColor="Black"/>
+        </sf:SfTextInputLayout>
+        <Label x:Name="Utilisateurmotdepasseoublié_emailError"  TextColor="Red" IsVisible="False" Margin="50,-5,0,0" FontAttributes="Bold"   />
+        <Label 
+ Text="{Binding updateresult}" 
+ TextColor="Red" 
+ VerticalOptions="CenterAndExpand" 
+ HorizontalOptions="CenterAndExpand" />
+     
+        <Button   Text="{loc:Translate Renitialise}"    BackgroundColor="#cd7100"  TextColor="White"  FontAttributes="Bold"    WidthRequest="220" HeightRequest="40" 
+ Margin="0,1,0,0"  FontSize="19"
+ Command="{Binding ResetPasswordCommand }"  />
+
+        
+    </VerticalStackLayout>
+</ContentPage>

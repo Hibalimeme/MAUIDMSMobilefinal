@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accepter" xml:space="preserve">
+    <value>قبول</value>
+  </data>
+  <data name="AddressRequis" xml:space="preserve">
+    <value>العنوان مطلوب</value>
+  </data>
+  <data name="Adresse" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="AjoutVéhicule" xml:space="preserve">
+    <value>إضافة سيارة</value>
+  </data>
+  <data name="Anglais" xml:space="preserve">
+    <value>الإنجليزية</value>
+  </data>
+  <data name="Annuler" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="Arab" xml:space="preserve">
+    <value>العربية</value>
+  </data>
+  <data name="AttenteValidation" xml:space="preserve">
+    <value>في انتظار التحقق</value>
+  </data>
+  <data name="AvoirCompte" xml:space="preserve">
+    <value>هل لديك حساب؟</value>
+  </data>
+  <data name="Bienvenue" xml:space="preserve">
+    <value>مرحباً!     </value>
+  </data>
+  <data name="CarteGrise" xml:space="preserve">
+    <value>صورة بطاقة التسجيل *</value>
+  </data>
+  <data name="Centres__" xml:space="preserve">
+    <value>مراكز الخدمة</value>
+  </data>
+  <data name="Centre__" xml:space="preserve">
+    <value>مركز الخدمة:</value>
+  </data>
+  <data name="Codecentre__" xml:space="preserve">
+    <value>رمز المركز:</value>
+  </data>
+  <data name="Codepackentretien__" xml:space="preserve">
+    <value>رمز حزمة الصيانة:</value>
+  </data>
+  <data name="CodePostal" xml:space="preserve">
+    <value>الرمز البريدي</value>
+  </data>
+  <data name="CodePostalRequis" xml:space="preserve">
+    <value>الرمز البريدي مطلوب</value>
+  </data>
+  <data name="Connecter" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="CreationCompte" xml:space="preserve">
+    <value>إنشاء حساب جديد   </value>
+  </data>
+  <data name="CreationVehicule" xml:space="preserve">
+    <value>إنشاء سيارة</value>
+  </data>
+  <data name="CreerCompte" xml:space="preserve">
+    <value>إنشاء حساب جديد</value>
+  </data>
+  <data name="Creneau" xml:space="preserve">
+    <value>فترة</value>
+  </data>
+  <data name="Creneauxd" xml:space="preserve">
+    <value>الفترات المتاحة</value>
+  </data>
+  <data name="Creneauxsel" xml:space="preserve">
+    <value>الفترات المختارة:</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>التاريخ:</value>
+  </data>
+  <data name="DateCirculation" xml:space="preserve">
+    <value>تاريخ التسجيل *</value>
+  </data>
+  <data name="DateCirculation__" xml:space="preserve">
+    <value>تاريخ التسجيل :</value>
+  </data>
+  <data name="DateHeure__" xml:space="preserve">
+    <value>التاريخ والوقت</value>
+  </data>
+  <data name="Dateplanifie__" xml:space="preserve">
+    <value>التاريخ المخطط:</value>
+  </data>
+  <data name="Deconnecter" xml:space="preserve">
+    <value>فصل الاتصال</value>
+  </data>
+  <data name="DeconnecterPoPUp" xml:space="preserve">
+    <value>هل تريد تسجيل الخروج؟</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>الوصف:</value>
+  </data>
+  <data name="detaildevis" xml:space="preserve">
+    <value>تفاصيل العرض</value>
+  </data>
+  <data name="Devis" xml:space="preserve">
+    <value>عروضــي</value>
+  </data>
+  <data name="Dure__" xml:space="preserve">
+    <value>المدة (دقائق):</value>
+  </data>
+  <data name="EchecConexion" xml:space="preserve">
+    <value>فشل تسجيل الدخول</value>
+  </data>
+  <data name="EmailInput" xml:space="preserve">
+    <value>البريد الإلكتروني</value>
+  </data>
+  <data name="EmailRequis" xml:space="preserve">
+    <value>عنوان البريد الإلكتروني مطلوب</value>
+  </data>
+  <data name="Email_" xml:space="preserve">
+    <value>البريد الإلكتروني</value>
+  </data>
+  <data name="Ensavoirplus" xml:space="preserve">
+    <value>معرفة المزيد</value>
+  </data>
+  <data name="EreurAttendValidation" xml:space="preserve">
+    <value>خطأ: حسابك في انتظار التحقق</value>
+  </data>
+  <data name="EreurCompteBlock" xml:space="preserve">
+    <value>خطأ: حسابك محظور</value>
+  </data>
+  <data name="EreurCompteBlockeOuAttent" xml:space="preserve">
+    <value>خطأ: الحساب محظور أو في انتظار التحقق</value>
+  </data>
+  <data name="EreurDateInvalide" xml:space="preserve">
+    <value>خطأ: تاريخ التسجيل الأول للسيارة غير صالح</value>
+  </data>
+  <data name="EreurDejaexist" xml:space="preserve">
+    <value>خطأ: المستخدم موجود بالفعل</value>
+  </data>
+  <data name="EreurEnvoieEmail" xml:space="preserve">
+    <value>خطأ: حدث خطأ أثناء إرسال البريد الإلكتروني</value>
+  </data>
+  <data name="EreurGenre" xml:space="preserve">
+    <value>خطأ: الجنس غير صالح</value>
+  </data>
+  <data name="EreurImatriculationinvalide" xml:space="preserve">
+    <value>خطأ: رقم تسجيل السيارة غير صالح</value>
+  </data>
+  <data name="EreurInconnu" xml:space="preserve">
+    <value>خطأ: غير معروف</value>
+  </data>
+  <data name="EreurMarqueInconnu" xml:space="preserve">
+    <value>خطأ: ماركة السيارة غير معروفة</value>
+  </data>
+  <data name="EreurModelInconnu" xml:space="preserve">
+    <value>خطأ: موديل السيارة غير معروف</value>
+  </data>
+  <data name="EreurMpIncorect" xml:space="preserve">
+    <value>خطأ: كلمة المرور غير صحيحة</value>
+  </data>
+  <data name="EreurNumChasiinvalide" xml:space="preserve">
+    <value>خطأ: رقم هيكل السيارة غير صالح</value>
+  </data>
+  <data name="EreurNumChassiexiste" xml:space="preserve">
+    <value>خطأ: رقم هيكل السيارة مسجل بالفعل</value>
+  </data>
+  <data name="Ereurobilgatoire" xml:space="preserve">
+    <value>خطأ: الحقول الإلزامية مفقودة</value>
+  </data>
+  <data name="EreurPhoto" xml:space="preserve">
+    <value>خطأ: صورة بطاقة تسجيل السيارة غير صالحة</value>
+  </data>
+  <data name="Ereurservenue" xml:space="preserve">
+    <value>حدث خطأ :</value>
+  </data>
+  <data name="EreurUserInvalide" xml:space="preserve">
+    <value>خطأ: المستخدم المحمول للسيارة غير صالح</value>
+  </data>
+  <data name="EreurUserNonTrouvé" xml:space="preserve">
+    <value>خطأ: المستخدم غير موجود</value>
+  </data>
+  <data name="ErreurAllert" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="Francais" xml:space="preserve">
+    <value>الفرنسية</value>
+  </data>
+  <data name="GenderRequis" xml:space="preserve">
+    <value>الجنس مطلوب</value>
+  </data>
+  <data name="Genre" xml:space="preserve">
+    <value>الجنس</value>
+  </data>
+  <data name="Heureplanifie__" xml:space="preserve">
+    <value>الوقت المخطط:</value>
+  </data>
+  <data name="Historique" xml:space="preserve">
+    <value>السجل</value>
+  </data>
+  <data name="HistoriquePage" xml:space="preserve">
+    <value>صفحة السجل</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="Immatriculation" xml:space="preserve">
+    <value>التسجيل *</value>
+  </data>
+  <data name="Immatriculation__" xml:space="preserve">
+    <value>التسجيل</value>
+  </data>
+  <data name="Inscrire" xml:space="preserve">
+    <value>تسجيل</value>
+  </data>
+  <data name="Kilometrage" xml:space="preserve">
+    <value>الكيلومترات:</value>
+  </data>
+  <data name="LanguageRequis" xml:space="preserve">
+    <value>اللغة مطلوبة</value>
+  </data>
+  <data name="Langue" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="Marque" xml:space="preserve">
+    <value>العلامة التجارية *</value>
+  </data>
+  <data name="Marque__" xml:space="preserve">
+    <value>العلامة التجارية :</value>
+  </data>
+  <data name="MenuVehicule" xml:space="preserve">
+    <value>سياراتي</value>
+  </data>
+  <data name="MesRendezVousPage" xml:space="preserve">
+    <value>صفحة المواعيد</value>
+  </data>
+  <data name="Mesvehicule" xml:space="preserve">
+    <value>صفحة السيارات</value>
+  </data>
+  <data name="MiseAjourOk" xml:space="preserve">
+    <value>تم التحديث بنجاح</value>
+  </data>
+  <data name="MiseCompte" xml:space="preserve">
+    <value>تحديث الحساب</value>
+  </data>
+  <data name="MiseJour" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="Modele" xml:space="preserve">
+    <value>الموديل *</value>
+  </data>
+  <data name="Modle__" xml:space="preserve">
+    <value>الموديل :</value>
+  </data>
+  <data name="MonCompte" xml:space="preserve">
+    <value>حسابي</value>
+  </data>
+  <data name="Montant" xml:space="preserve">
+    <value>المبلغ:</value>
+  </data>
+  <data name="Mp" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="MpOublie" xml:space="preserve">
+    <value>نسيت كلمة المرور؟  </value>
+  </data>
+  <data name="MpRequis" xml:space="preserve">
+    <value>كلمة المرور مطلوبة</value>
+  </data>
+  <data name="ndevis__" xml:space="preserve">
+    <value>رقم العرض</value>
+  </data>
+  <data name="Nom" xml:space="preserve">
+    <value>اسم العائلة</value>
+  </data>
+  <data name="Nomcentre__" xml:space="preserve">
+    <value>اسم المركز:</value>
+  </data>
+  <data name="NomRequis" xml:space="preserve">
+    <value>اسم العائلة مطلوب</value>
+  </data>
+  <data name="Non" xml:space="preserve">
+    <value>لا</value>
+  </data>
+  <data name="Numchass__" xml:space="preserve">
+    <value>رقم الهيكل :</value>
+  </data>
+  <data name="Numerochassis" xml:space="preserve">
+    <value>رقم الهيكل *</value>
+  </data>
+  <data name="numWhatsApp" xml:space="preserve">
+    <value>رقم الواتساب مطلوب</value>
+  </data>
+  <data name="Numrocrneau__" xml:space="preserve">
+    <value>رقم الحصة:</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>حسنًا</value>
+  </data>
+  <data name="Oui" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="PackEntretien__" xml:space="preserve">
+    <value>حزمة الصيانة:</value>
+  </data>
+  <data name="Packsmaintenance__" xml:space="preserve">
+    <value>حزم الصيانة</value>
+  </data>
+  <data name="pageCreationCompte" xml:space="preserve">
+    <value>صفحة إنشاء الحساب</value>
+  </data>
+  <data name="pagedevis" xml:space="preserve">
+    <value>صفحة العرض السعري</value>
+  </data>
+  <data name="PasCompte" xml:space="preserve">
+    <value>ليس لديك حساب؟</value>
+  </data>
+  <data name="PasConexion" xml:space="preserve">
+    <value>لا يوجد اتصال بالإنترنت. يرجى التحقق من اتصالك وإعادة المحاولة.</value>
+  </data>
+  <data name="Pays" xml:space="preserve">
+    <value>البلد</value>
+  </data>
+  <data name="PaysRequis" xml:space="preserve">
+    <value>البلد مطلوب</value>
+  </data>
+  <data name="Photo2" xml:space="preserve">
+    <value>صورة 2</value>
+  </data>
+  <data name="Photo3" xml:space="preserve">
+    <value>صورة 3</value>
+  </data>
+  <data name="Prenom" xml:space="preserve">
+    <value>الاسم الأول</value>
+  </data>
+  <data name="PrenomRequis" xml:space="preserve">
+    <value>الاسم الأول مطلوب</value>
+  </data>
+  <data name="Refuser" xml:space="preserve">
+    <value>رفض</value>
+  </data>
+  <data name="RendezVous" xml:space="preserve">
+    <value>مواعيدي</value>
+  </data>
+  <data name="RenitialisationOk" xml:space="preserve">
+    <value>تم إعادة التعيين بنجاح</value>
+  </data>
+  <data name="Renitialise" xml:space="preserve">
+    <value>إعادة التعيين</value>
+  </data>
+  <data name="Réinitialiser" xml:space="preserve">
+    <value>إعادة تعيين</value>
+  </data>
+  <data name="Rserver" xml:space="preserve">
+    <value>حجز</value>
+  </data>
+  <data name="Rserverrdv" xml:space="preserve">
+    <value>حجز موعد</value>
+  </data>
+  <data name="scentre" xml:space="preserve">
+    <value>اختيار مركز خدمة</value>
+  </data>
+  <data name="screnaux" xml:space="preserve">
+    <value>اختيار الفترات المتاحة</value>
+  </data>
+  <data name="Session" xml:space="preserve">
+    <value>تسجيل دخول دائمً</value>
+  </data>
+  <data name="sKilomtrage" xml:space="preserve">
+    <value>إدخال عدد الكيلومترات</value>
+  </data>
+  <data name="Slogan" xml:space="preserve">
+    <value>طريقك بكل راحة واطمئنان     </value>
+  </data>
+  <data name="Statut__" xml:space="preserve">
+    <value>الحالة:</value>
+  </data>
+  <data name="Succes" xml:space="preserve">
+    <value>نجاح</value>
+  </data>
+  <data name="svehicule" xml:space="preserve">
+    <value>اختيار مركبة</value>
+  </data>
+  <data name="Updateok" xml:space="preserve">
+    <value>التحديث ناجح</value>
+  </data>
+  <data name="Valeur" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Valider" xml:space="preserve">
+    <value>تأكيد</value>
+  </data>
+  <data name="VehiculeCreeSucces" xml:space="preserve">
+    <value>تم إنشاء السيارة بنجاح</value>
+  </data>
+  <data name="Ville" xml:space="preserve">
+    <value>المدينة</value>
+  </data>
+  <data name="VilleRequis" xml:space="preserve">
+    <value>المدينة مطلوبة</value>
+  </data>
+  <data name="VéhiculesValidés" xml:space="preserve">
+    <value>السيارات المقبولة</value>
+  </data>
+  <data name="WhatsApp" xml:space="preserve">
+    <value>رقم الواتساب</value>
+  </data>
+  <data name="Kilometrage__" xml:space="preserve">
+    <value>الكيلومترات</value>
+  </data>
+  <data name="comptesucces" xml:space="preserve">
+    <value>تم إنشاء الحساب بنجاح</value>
+  </data>
+  <data name="ereurcartegrise" xml:space="preserve">
+    <value>صورة بطاقة التسجيل مطلوبة</value>
+  </data>
+  <data name="ereurdateimmatriculation" xml:space="preserve">
+    <value>تاريخ التسجيل مطلوب</value>
+  </data>
+  <data name="ereurimtriculation" xml:space="preserve">
+    <value>رقم التسجيل مطلوب</value>
+  </data>
+  <data name="ereurmarque" xml:space="preserve">
+    <value>العلامة التجارية مطلوبة</value>
+  </data>
+  <data name="ereurmodel" xml:space="preserve">
+    <value>الطراز مطلوب</value>
+  </data>
+  <data name="ereurnchassis" xml:space="preserve">
+    <value>رقم الهيكل مطلوب</value>
+  </data>
+  <data name="messageok" xml:space="preserve">
+    <value>حسنًا</value>
+  </data>
+  <data name="devisaccpte" xml:space="preserve">
+    <value>تم قبول العرض</value>
+  </data>
+  <data name="devisrefus" xml:space="preserve">
+    <value>تم رفض العرض</value>
+  </data>
+  <data name="crenauxinf" xml:space="preserve">
+    <value>الفترات الزمنية المحددة غير متتالية أو غير كافية</value>
+  </data>
+  <data name="crenauxpasvalide" xml:space="preserve">
+    <value>الفترات الزمنية أو الباقة غير صالحة</value>
+  </data>
+  <data name="rdzechoue" xml:space="preserve">
+    <value>فشل حجز الموعد</value>
+  </data>
+  <data name="spack" xml:space="preserve">
+    <value>حدد باقة الصيانة</value>
+  </data>
+  <data name="bookedok" xml:space="preserve">
+    <value>تم حجز الموعد بنجاح</value>
+  </data>
+  <data name="hrendezvous" xml:space="preserve">
+    <value>سجل المواعيد</value>
+  </data>
+  <data name="doitremplir" xml:space="preserve">
+    <value>يرجى تعبئة جميع الحقول</value>
+  </data>
+  <data name="log" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="packinsufisant" xml:space="preserve">
+    <value>الفترات الزمنية المحددة ليست متتالية، أو يجب أن تغطي بالضبط مدة الحزمة</value>
+  </data>
+</root>

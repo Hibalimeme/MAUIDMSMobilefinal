@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+    xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+    x:Class="MAUIDMSMobile.Mvvm.Views.devisPOPUP"
+    xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+    NavigationPage.HasNavigationBar="False"
+    x:Name="CentrelstView">
+
+    <Border
+        Stroke="Transparent"
+        StrokeShape="RoundRectangle 25"
+        BackgroundColor="#fee4c4"
+        Margin="0,0,0,0"
+        WidthRequest="335"
+        HeightRequest="430"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+
+        <ScrollView HorizontalOptions="Center" VerticalOptions="Center">
+            <VerticalStackLayout Padding="20">
+                <ImageButton 
+    Source="x.png"
+    WidthRequest="4"
+    HeightRequest="3"
+    Margin="0,-30,0,0"
+    Clicked="ClosePopup_Clicked"
+    BackgroundColor="Transparent"
+    BorderColor="Transparent"
+/>
+
+                <Label Text="{loc:Translate detaildevis}"
+                       FontAttributes="Bold"
+                       FontFamily="Times New Roman"
+                       FontSize="25"
+                       TextColor="#eb8126"
+                       HorizontalOptions="Center"
+                        Margin="0,10,0,0"
+                       VerticalOptions="Center" />
+                <ActivityIndicator
+             
+x:Name="activityIndicatordevis"
+IsEnabled="{Binding IsBusy}"
+IsRunning="{Binding IsBusy}"
+IsVisible="{Binding IsBusy}" />
+                <VerticalStackLayout Padding="1" Margin="5">
+                    <!-- Numéro Devis -->
+                    <Label Margin="10,16,0,10">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{loc:Translate ndevis__}" TextColor="#954500"  FontAttributes="Bold"/>
+                                <Span Text="{Binding SelectedDevis.NumeroDevis}" TextColor="#954500"  FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <!-- Numéro Ligne -->
+                    <Label Margin="10,0,0,10">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Numéro Ligne : " TextColor="#954500"  FontAttributes="Bold"/>
+                                <Span Text="{Binding SelectedDevis.NumeroLigne}" TextColor="#954500"  FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <!-- Numéro Châssis -->
+                    <Label Margin="10,0,0,10">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{loc:Translate Numchass__}" TextColor="#954500"  FontAttributes="Bold"/>
+                                <Span Text="{Binding SelectedDevis.NumeroChassis}" TextColor="#954500"  FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <!-- Date -->
+                    <Label Margin="10,0,0,10">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{loc:Translate Date}"  TextColor="#954500"  FontAttributes="Bold"/>
+                                <Span Text="{Binding SelectedDevis.Date}" TextColor="#954500"  FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Margin="10,0,0,10">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{loc:Translate Description}"  TextColor="#954500"  FontAttributes="Bold"/>
+                                <Span Text="{Binding SelectedDevis.Libelle}" TextColor="#954500"  FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <!-- Montant -->
+                    <Label Margin="10,0,0,10">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{loc:Translate Montant}"  TextColor="#954500"  FontAttributes="Bold"/>
+                                <Span Text="{Binding SelectedDevis.Montant}" TextColor="#954500"  FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <!-- Statut -->
+                    <Label Margin="10,0,0,10" FontAttributes="Bold">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{loc:Translate Statut__}" TextColor="#954500"  FontAttributes="Bold"/>
+                                <Span Text="{Binding SelectedDevis.Statut}" TextColor="#954500"  FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <HorizontalStackLayout Spacing="10" Padding="10">
+                        <Button Text="{loc:Translate Accepter}" IsEnabled="{Binding IsButtonsEnabled}" WidthRequest="100" IsVisible="{Binding IsButtonsEnabled}"   BackgroundColor="#eb8126" TextColor="White"   FontAttributes="Bold"
+            Command="{Binding AccepterCommand}"
+          />
+
+                        <Button Text="{loc:Translate Refuser}" IsEnabled="{Binding IsButtonsEnabled}" IsVisible="{Binding IsButtonsEnabled}" Margin="40,0,0,0" TextColor="White" WidthRequest="100" FontAttributes="Bold"
+            Command="{Binding RefuserCommand}" BackgroundColor="#eb8126"
+           />
+                    </HorizontalStackLayout>
+
+                    <!-- Image -->
+                    <!--<Image Source="{Binding DevisImage}"
+                           WidthRequest="130"
+                           HeightRequest="60"
+                           Aspect="AspectFit"
+                           HorizontalOptions="Center"
+                           BackgroundColor="Aqua">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ShowFullScreenImageCommand}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    --><!-- Image plein écran --><!--
+                    <Grid IsVisible="{Binding IsImageFullScreen}">
+                        <Image Source="{Binding DevisImageFullScreen}" Aspect="AspectFit" BackgroundColor="Black" />
+                        <Button Text="Fermer" Command="{Binding CloseFullScreenImageCommand}" HorizontalOptions="End" VerticalOptions="Start" />
+                    </Grid>-->
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Border>
+</mopups:PopupPage>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    x:Class="MAUIDMSMobile.Mvvm.Views.Ajouterrendezvous"
+    xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+
+    xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+    xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+    BackgroundColor="#80000000"
+    NavigationPage.HasNavigationBar="False"
+  
+
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    InputTransparent="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <toolkit:IsStringNotNullOrEmptyConverter x:Key="IsStringNotNullOrEmptyConverter" />
+            <toolkit:IntToBoolConverter x:Key="IntToBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Border
+   
+    Stroke="Transparent"
+    StrokeShape="RoundRectangle 25"
+    BackgroundColor="#fee4c4"
+    Margin="0,20,0,0"
+    WidthRequest="330"
+    
+    HorizontalOptions="Center"
+    VerticalOptions="Center">
+
+    <ScrollView HeightRequest="600" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <VerticalStackLayout Padding="20" Spacing="15"> 
+                <ImageButton 
+    Source="x.png"
+    WidthRequest="100"
+    HeightRequest="30"
+
+    Clicked="ClosePopup_Clicked"
+    BackgroundColor="Transparent"
+    BorderColor="Transparent"
+/>
+                
+                    <Label Text="{loc:Translate Rserverrdv}"
+                       FontAttributes="Bold"
+                       FontSize="22"
+                     Margin="0,-14,0,0"
+                       TextColor="#eb8126"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+              
+                
+                   
+               
+                <HorizontalStackLayout>
+
+                    <Entry Text="{Binding VehiculeSelectionne.Resume}" Placeholder="{loc:Translate svehicule}" FontAttributes="Bold" PlaceholderColor="Black" WidthRequest="250"  IsReadOnly="True"/>
+            
+                    <Button Text="+" Command="{Binding VehiculeTappedCommand}"  FontAttributes="Bold"
+ FontSize="20" BackgroundColor="#eb8126" TextColor="#fee4c4"/>
+    </HorizontalStackLayout>
+
+    <HorizontalStackLayout>
+
+                    <Entry Text="{Binding CentreSelectionne.Resume}"  Placeholder="{loc:Translate scentre}" PlaceholderColor="Black" FontAttributes="Bold" WidthRequest="250" IsReadOnly="True"/>
+             
+                    <Button Text="+" Command="{Binding CentreServiceTappedCommand}"  FontAttributes="Bold"
+ FontSize="20" BackgroundColor="#eb8126" TextColor="#fee4c4"/>
+    </HorizontalStackLayout>
+
+    <HorizontalStackLayout>
+
+                    <Entry Text="{Binding PackSelectionne.Resume}" Placeholder="{loc:Translate spack}" PlaceholderColor="Black" FontAttributes="Bold" WidthRequest="250" IsReadOnly="True"/>
+                   
+                    <Button Text="+" Command="{Binding PackEntretienTappedCommand}"  FontAttributes="Bold"
+ FontSize="20" BackgroundColor="#eb8126" TextColor="#fee4c4"/>
+    </HorizontalStackLayout>
+                <HorizontalStackLayout>
+
+                    <Entry Text="{Binding CreneauSelectionne.CodeCreneau}"
+  Placeholder="{loc:Translate screnaux}" PlaceholderColor="Black" FontAttributes="Bold"
+    WidthRequest="250" IsReadOnly="True"/>
+
+                    <Button Text="+"
+     Command="{Binding VerifierCreneauxTappedCommand}"  
+     FontAttributes="Bold"
+     FontSize="20"
+     BackgroundColor="#eb8126"
+     TextColor="#fee4c4"/>
+                </HorizontalStackLayout>
+
+                <!-- 🔽 AFFICHAGE DES CRENEAUX SÉLECTIONNÉS 🔽 -->
+                <Label Text="{loc:Translate Creneauxsel}"
+FontSize="18"
+FontAttributes="Bold"
+TextColor="#eb8126"
+Margin="0,-9,0,0" />
+                <CollectionView ItemsSource="{Binding CreneauxSelectionnes}"
+         SelectionMode="None"
+         HeightRequest="150"
+                                Margin="0,-16,0,0"
+                                >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#ffe1bc" BorderColor="#954500" CornerRadius="15"  Padding="2" Margin="0,5,0,0">
+                                <VerticalStackLayout>
+                                    <Entry Text="{Binding DatePlanifiee}"
+                    IsReadOnly="True" FontAttributes="Bold"
+                    Placeholder="Date"  Margin="10,-6,0,0"/>
+                                    <Entry Text="{Binding HeurePlanifiee}"
+                    IsReadOnly="True" FontAttributes="Bold"
+                    Placeholder="Heure"  Margin="10,-6,0,0"/>
+                                    <Entry Text="{Binding CodeCentre}"
+                    IsReadOnly="True" FontAttributes="Bold"
+                    Placeholder="Centre"  Margin="10,-6,0,0"/>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <HorizontalStackLayout>
+
+                    <Entry Text="{Binding RendezVous.KilometrageVehicule}" PlaceholderColor="Black"  Margin="10,-36,0,0" FontAttributes="Bold" Placeholder="{loc:Translate sKilomtrage}" WidthRequest="250" />
+              
+                </HorizontalStackLayout>
+
+
+                <Button Text="{loc:Translate Rserver}"
+          Command="{Binding CreateRendezvousCommand}"
+          FontAttributes="Bold"
+          FontSize="20"
+          WidthRequest="120"
+          HeightRequest="30"
+          BackgroundColor="#eb8126"
+          TextColor="#fee4c4"
+         Margin="0,-6,0,0" />
+
+            </VerticalStackLayout>
+
+    </ScrollView>
+    </Border>
+</mopups:PopupPage>

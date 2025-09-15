@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    x:Class="MAUIDMSMobile.Mvvm.Views.CreneauxDisponible"
+    xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+    x:Name="CreneauxlstView"
+     NavigationPage.HasNavigationBar="False"
+    xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+    xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+    BackgroundColor="#80000000">
+
+    <Border Stroke="Transparent"
+            StrokeShape="RoundRectangle 25"
+            BackgroundColor="#fee4c4"
+            Margin="10"
+            WidthRequest="330"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+        <ScrollView>
+            <VerticalStackLayout>
+                <ImageButton 
+    Source="x.png"
+    WidthRequest="4"
+    HeightRequest="3"
+    Margin="0,0,0,0"
+    Clicked="ClosePopup_Clicked"
+    BackgroundColor="Transparent"
+    BorderColor="Transparent"
+/>
+                <Label Text="{loc:Translate Creneauxd}"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       Margin="0"
+                       TextColor="#eb8126"
+                       HorizontalOptions="Center" />
+
+                <Button Text="{loc:Translate Valider}"
+                        Command="{Binding ValiderCreneauxCommand}"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        WidthRequest="130"
+                        HeightRequest="30"
+                        BackgroundColor="#eb8126"
+                        TextColor="#fee4c4"
+                        Margin="5" />
+
+                <CollectionView ItemsSource="{Binding CreneauxService}" ItemSizingStrategy="MeasureFirstItem">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border StrokeShape="RoundRectangle 15,15,15,15"
+                    BackgroundColor="#ffe1bc"
+                    Stroke="#954500" 
+Margin="5,5,5,0"
+                    StrokeThickness="1"
+                    VerticalOptions="FillAndExpand">
+                                <Grid ColumnDefinitions="*, Auto">
+                                    <VerticalStackLayout Grid.Column="0" Padding="10">
+                                        <Label FontAttributes="Bold"  TextColor="#eb8126" Margin="13,0,0,0">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <!-- Localized "Créneau" -->
+                                                    <Span Text="{loc:Translate Creneau}" TextColor="#eb8126" FontAttributes="Bold" 
+FontSize="15" />
+
+                                                    <!-- Space between text and index -->
+                                                    <Span Text=" " />
+
+                                                    <!-- Dynamic index -->
+                                                    <Span Text="{Binding Index}" TextColor="#eb8126" FontAttributes="Bold"
+FontSize="15"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                        <Label Margin="10,0,0,0"
+       HorizontalOptions="StartAndExpand" 
+       VerticalOptions="Center">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{loc:Translate Dateplanifie__}" TextColor="#954500" FontAttributes="Bold" />
+                                                    <Span Text="{Binding DatePlanifiee}" TextColor="#954500" FontAttributes="Bold" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                        <Label Margin="10,0,0,0"
+       HorizontalOptions="StartAndExpand"
+       VerticalOptions="Center">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{loc:Translate Heureplanifie__}" TextColor="#954500" FontAttributes="Bold" />
+                                                    <Span Text="{Binding HeurePlanifiee}" TextColor="#954500" FontAttributes="Bold" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                        <Label Margin="10,0,0,0"
+       HorizontalOptions="StartAndExpand" 
+       VerticalOptions="Center">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{loc:Translate Codecentre__}" TextColor="#954500" FontAttributes="Bold" />
+                                                    <Span Text="{Binding CodeCentre}" TextColor="#954500" FontAttributes="Bold" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        
+                                        <Label Margin="10,0,0,0"
+HorizontalOptions="StartAndExpand" 
+VerticalOptions="Center">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{loc:Translate Dure__}" TextColor="#954500" FontAttributes="Bold" />
+                                                    <Span Text="{Binding DureeEnMinutes}" TextColor="#954500" FontAttributes="Bold" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                    </VerticalStackLayout>
+
+                                    <CheckBox Grid.Column="1"
+                                              IsChecked="{Binding IsSelected, Mode=TwoWay}"
+                                              IsEnabled="{Binding IsEnabled}"
+                                              Color="Green"
+                                              VerticalOptions="Center"
+                                              WidthRequest="30"
+                                              Margin="5" />
+
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference CreneauxlstView}, Path=BindingContext.CheckCommand}"
+                                                              CommandParameter="{Binding .}" />
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Border>
+</mopups:PopupPage>

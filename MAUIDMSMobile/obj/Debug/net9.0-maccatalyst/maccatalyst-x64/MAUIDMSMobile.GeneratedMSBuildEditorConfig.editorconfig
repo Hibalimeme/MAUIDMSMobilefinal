@@ -1,0 +1,168 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.TargetFramework = net9.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MAUIDMSMobile
+build_property.ProjectDir = C:\Users\hibal\OneDrive\Bureau\MAUIDMSMOBILEfinal\MAUIDMSMobile\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/Ajouterrendezvous.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.Ajouterrendezvous.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\Ajouterrendezvous.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\Ajouterrendezvous.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/AjouterVehiculePopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.AjouterVehiculePopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\AjouterVehiculePopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\AjouterVehiculePopup.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/CentreService.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.CentreService.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\CentreService.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\CentreService.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/ChoixVehicule.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.ChoixVehicule.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\ChoixVehicule.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\ChoixVehicule.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/CreationComptePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.CreationComptePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\CreationComptePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\CreationComptePage.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/CreneauxDisponible.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.CreneauxDisponible.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\CreneauxDisponible.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\CreneauxDisponible.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/DevisPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.DevisPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\DevisPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\DevisPage.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/devisPOPUP.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.devisPOPUP.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\devisPOPUP.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\devisPOPUP.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/HistoriquePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.HistoriquePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\HistoriquePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\HistoriquePage.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/Homepage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.Homepage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\Homepage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\Homepage.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/Langue.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.Langue.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\Langue.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\Langue.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\LoginPage.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/LogoutConfirmationPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.LogoutConfirmationPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\LogoutConfirmationPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\LogoutConfirmationPopup.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/MesRendezVousPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.MesRendezVousPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\MesRendezVousPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\MesRendezVousPage.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/MesVéhiculesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.MesVéhiculesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\MesVéhiculesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\MesVéhiculesPage.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/miseajourdecompte.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.miseajourdecompte.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\miseajourdecompte.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\miseajourdecompte.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/MonComptePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.MonComptePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\MonComptePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\MonComptePage.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/Motdepasseoublié.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.Motdepasseoublié.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\Motdepasseoublié.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\Motdepasseoublié.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Mvvm/Views/PackEntretien.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Mvvm.Views.PackEntretien.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\PackEntretien.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\PackEntretien.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/hibal/OneDrive/Bureau/MAUIDMSMOBILEfinal/MAUIDMSMobile/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIDMSMobile.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

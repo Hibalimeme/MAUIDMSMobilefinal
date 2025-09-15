@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIDMSMobile.Mvvm.Views.Homepage"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+            xmlns:statics="clr-namespace:MAUIDMSMobile.Static"
+FlowDirection="{x:Static statics:StaticMultiLang.MLFlowDirection}"
+             xmlns:resx="clr-namespace:MAUIDMSMobile.Resx"
+             NavigationPage.HasNavigationBar="False"
+             Title="{loc:Translate home}">
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="logob2m.png" />
+    </ContentPage.ToolbarItems>-->
+    <ScrollView>
+        <Grid RowSpacing="30" >
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#ffe5c3" Offset="0.0" />
+                    <GradientStop Color="#f9c27b" Offset="0.6" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <VerticalStackLayout Grid.Row="0" Padding="10">
+
+                <Label Text="{loc:Translate Bienvenue}"
+         Margin="110,31,0,6"
+         FontSize="23"
+         FontAttributes="Bold"
+         TextColor="#cd7100" />
+                <BoxView BackgroundColor="#cd7100"
+           HeightRequest="1"
+           WidthRequest="110"
+           HorizontalOptions="Fill"
+           Margin="0,-3,0,5" />
+                <Label Text="{loc:Translate Slogan}"
+         Margin="40,11,0,6"  
+         FontSize="20"
+         FontAttributes="Bold"
+         TextColor="#cd7100" />
+            </VerticalStackLayout>
+
+            <Grid Grid.Row="1" Padding="25" RowSpacing="20" ColumnSpacing="30" Margin="0,-20,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Row="0" Grid.Column="0" StrokeShape="RoundRectangle 15,15,15,15"
+          BackgroundColor="#fee4c4" Stroke="Transparent" StrokeThickness="5"
+          HeightRequest="150" WidthRequest="160">
+                    
+                    <VerticalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton Source="voiture.png"
+             WidthRequest="70"
+             HeightRequest="70"
+             BackgroundColor="Transparent" Clicked="OnAjouterVehiculeClicked" HorizontalOptions="Center"
+             VerticalOptions="Center" />
+                        <Label Text="{loc:Translate MenuVehicule}" HorizontalTextAlignment="Center" FontSize="20" Margin="0,-14,0,0"
+           FontAttributes="Bold" TextColor="#cd7100" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="1" StrokeShape="RoundRectangle 15,15,15,15"
+          BackgroundColor="#fee4c4" Stroke="Transparent" StrokeThickness="5"
+          HeightRequest="150" WidthRequest="160">
+                    <VerticalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton Source="rendezvous.png"
+WidthRequest="60"
+HeightRequest="60"
+BackgroundColor="Transparent" Clicked="OnGererRendezvousClicked" HorizontalOptions="Center"
+VerticalOptions="Center" />
+                        <Label Text="{loc:Translate RendezVous}" HorizontalTextAlignment="Center" FontSize="20" Margin="0,-8,0,0"
+           FontAttributes="Bold" TextColor="#cd7100" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="0" StrokeShape="RoundRectangle 15,15,15,15"
+          BackgroundColor="#fee4c4" Stroke="Transparent" StrokeThickness="5"
+          HeightRequest="150" WidthRequest="160">
+                    <VerticalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton Source="devis.png"
+               WidthRequest="70"
+               HeightRequest="70"
+               BackgroundColor="Transparent"
+               Clicked="OnAjouterDevisClicked"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+                        <Label Text="{loc:Translate Devis}"
+         HorizontalTextAlignment="Center"
+         FontSize="20"
+         Margin="0,-7,0,0"
+         FontAttributes="Bold"
+         TextColor="#cd7100" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="1" StrokeShape="RoundRectangle 15,15,15,15"
+          BackgroundColor="#fee4c4" Stroke="Transparent" StrokeThickness="5"
+          HeightRequest="150" WidthRequest="160">
+                    <VerticalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton Source="historique.png"
+WidthRequest="65"
+HeightRequest="65"
+BackgroundColor="Transparent" Clicked="OnConsulterHistoriqueClicked" HorizontalOptions="Center"
+VerticalOptions="Center" />
+                        <Label Text="{loc:Translate Historique}" HorizontalTextAlignment="Center" FontSize="20" Margin="0,-7,0,0"
+           FontAttributes="Bold" TextColor="#cd7100" />
+
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+
+            <Border Grid.Row="2" 
+                    StrokeShape="RoundRectangle 15,15,15,15"
+                    BackgroundColor="#fee4c4"
+                    Stroke="Transparent"
+                   Margin="0,-60,0,30"
+                    StrokeThickness="5"
+                    HeightRequest="150"
+                    WidthRequest="160"
+                    HorizontalOptions="Center">
+                <VerticalStackLayout Spacing="10"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center">
+                    <ImageButton Source="utulisateur.png"
+WidthRequest="60"
+HeightRequest="60"
+BackgroundColor="Transparent" Clicked="OnGererCompteClicked" HorizontalOptions="Center"
+VerticalOptions="Center" />
+                    <Label Text="{loc:Translate MonCompte}"
+ HorizontalTextAlignment="Center" FontSize="20" Margin="0,-5,0,0"
+           FontAttributes="Bold" TextColor="#cd7100" />
+                  
+                </VerticalStackLayout>
+            </Border>
+
+        </Grid>
+
+
+    </ScrollView>
+</ContentPage>
